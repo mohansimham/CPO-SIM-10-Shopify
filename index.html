@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CPO SIM 10 — Shopify | CXO Simulabs</title>
+<meta name="description" content="Master product roadmapping through Shopify's pivotal decisions. A CPO Track simulation by CXO Simulabs.">
+<link rel="canonical" href="https://mohansimham.github.io/CPO-SIM-10-Shopify/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CPO SIM 10 — Shopify | CXO Simulabs">
+<meta property="og:description" content="Master product roadmapping through Shopify's pivotal decisions. Test your product instincts through 10 real scenarios.">
+<meta property="og:url" content="https://mohansimham.github.io/CPO-SIM-10-Shopify/">
+<meta property="og:site_name" content="CXO Simulabs">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CPO SIM 10 — Shopify | CXO Simulabs">
+<meta name="twitter:description" content="Master product roadmapping through Shopify's pivotal decisions. Test your product instincts through 10 real scenarios.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"CPO SIM 10 — Shopify","url":"https://mohansimham.github.io/CPO-SIM-10-Shopify/","description":"Master product roadmapping through Shopify's pivotal decisions. A CPO Track simulation by CXO Simulabs.","applicationCategory":"Education","provider":{"@type":"Organization","name":"CXO Simulabs","url":"https://www.cxosimulabs.com"}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4J0M6TE3E"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z4J0M6TE3E');</script>
+<style>
+:root {
+  --navy:#1a1a2e; --navy-mid:#16213e; --red:#e23744;
+  --accent:#008060; --accent-light:#e6f4ee;
+  --white:#fff; --light:#f7f7f9; --border:#e5e7eb;
+  --text:#1f2937; --muted:#6b7280;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:var(--light);color:var(--text);line-height:1.6;}
+.phase{display:none;}
+.phase.active{display:block;}
+
+/* NAV */
+.nav{background:var(--navy);padding:0 32px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-logo{color:#fff;font-weight:800;font-size:1.1em;letter-spacing:.5px;}
+.nav-logo span{color:var(--red);}
+.nav-track{background:rgba(24,119,242,.15);border:1px solid rgba(24,119,242,.3);color:#8bb8f4;padding:4px 12px;border-radius:20px;font-size:.75em;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.nav-sims{display:flex;gap:4px;}
+.nav-sim{color:#778;text-decoration:none;font-size:.78em;padding:4px 10px;border-radius:6px;transition:all .2s;}
+.nav-sim:hover{color:#fff;background:rgba(255,255,255,.08);}
+.nav-sim.current{color:var(--accent);font-weight:600;}
+
+/* HERO BAND */
+.sim-band{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:48px 32px 40px;text-align:center;}
+.sim-band .eyebrow{display:inline-block;background:rgba(24,119,242,.15);border:1px solid rgba(24,119,242,.35);color:#8bb8f4;padding:5px 16px;border-radius:20px;font-size:.75em;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-bottom:16px;}
+.sim-band h1{color:#fff;font-size:2em;font-weight:900;margin-bottom:8px;}
+.sim-band p{color:#778899;font-size:1em;max-width:520px;margin:0 auto;}
+
+/* CARD */
+.card{background:var(--white);border-radius:14px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);max-width:620px;margin:0 auto;}
+.center-wrap{padding:40px 24px;}
+
+/* FORM */
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;font-size:.85em;font-weight:600;color:var(--text);margin-bottom:6px;}
+.form-group input{width:100%;padding:12px 14px;border:2px solid var(--border);border-radius:8px;font-size:.95em;font-family:'Inter',sans-serif;transition:border-color .2s;outline:none;}
+.form-group input:focus{border-color:var(--accent);}
+.form-note{font-size:.8em;color:var(--muted);margin-top:8px;}
+.btn{display:inline-block;padding:13px 28px;border-radius:8px;font-weight:700;font-size:.95em;cursor:pointer;border:none;transition:all .2s;font-family:'Inter',sans-serif;}
+.btn-primary{background:var(--accent);color:#fff;width:100%;}
+.btn-primary:hover{background:#1565c0;transform:translateY(-1px);}
+.btn-outline{background:transparent;border:2px solid var(--border);color:var(--text);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+.btn-navy{background:var(--navy);color:#fff;width:100%;}
+.btn-navy:hover{background:var(--navy-mid);}
+.error-msg{color:#dc2626;font-size:.82em;margin-top:8px;display:none;}
+.success-msg{color:#059669;font-size:.82em;margin-top:8px;display:none;}
+
+/* OTP */
+.otp-input{letter-spacing:8px;font-size:1.4em;text-align:center;font-weight:700;}
+.otp-timer{font-size:.8em;color:var(--muted);text-align:center;margin-top:8px;}
+.resend-link{color:var(--accent);cursor:pointer;text-decoration:underline;}
+
+/* INTRO */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;}
+.intro-card{background:var(--light);border-radius:10px;padding:18px;border-left:3px solid var(--accent);}
+.intro-card h4{font-size:.88em;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.intro-card p{font-size:.82em;color:var(--muted);}
+.attempt-badge{display:inline-flex;align-items:center;gap:6px;background:var(--accent-light);color:var(--accent);padding:6px 14px;border-radius:20px;font-size:.82em;font-weight:700;margin-bottom:20px;}
+
+/* QUESTIONS */
+.q-wrap{max-width:760px;margin:0 auto;padding:32px 24px;}
+.progress-bar-wrap{background:var(--white);border-bottom:1px solid var(--border);padding:14px 32px;}
+.progress-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;max-width:760px;margin-left:auto;margin-right:auto;}
+.progress-label{font-size:.82em;font-weight:600;color:var(--muted);}
+.progress-track{height:5px;background:#e5e7eb;border-radius:3px;max-width:760px;margin:0 auto;}
+.progress-fill{height:5px;background:var(--accent);border-radius:3px;transition:width .4s ease;}
+.scenario-box{background:var(--white);border-radius:12px;padding:28px;margin-bottom:24px;border-left:4px solid var(--accent);}
+.scenario-label{font-size:.72em;text-transform:uppercase;letter-spacing:2px;color:var(--accent);font-weight:700;margin-bottom:10px;}
+.scenario-text{font-size:.93em;color:#374151;line-height:1.75;white-space:pre-line;}
+.scenario-text strong{display:block;color:var(--navy);font-weight:700;margin-top:14px;margin-bottom:4px;font-size:.95em;}
+.q-text{font-size:1.05em;font-weight:700;color:var(--navy);margin-bottom:20px;line-height:1.5;}
+.options{display:flex;flex-direction:column;gap:12px;}
+.option{background:var(--white);border:2px solid var(--border);border-radius:10px;padding:16px 18px;cursor:pointer;transition:all .2s;font-size:.93em;line-height:1.5;}
+.option:hover{border-color:var(--accent);background:var(--accent-light);}
+.option.locked{pointer-events:none;cursor:default;}
+.feedback-box{background:#f8fafc;border-radius:10px;padding:20px;margin-top:20px;border-left:3px solid var(--navy);font-size:.9em;color:#374151;line-height:1.7;}
+.feedback-box .fb-label{font-weight:700;color:var(--navy);margin-bottom:6px;font-size:.85em;text-transform:uppercase;letter-spacing:.5px;}
+.next-btn-wrap{margin-top:24px;text-align:right;}
+
+/* RESULTS */
+.results-wrap{max-width:800px;margin:0 auto;padding:40px 24px;}
+.score-ring-wrap{text-align:center;margin:24px 0;}
+.score-ring{position:relative;display:inline-block;}
+.score-ring canvas{display:block;}
+.score-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+.score-num{font-size:2.4em;font-weight:900;color:var(--navy);}
+.score-pct{font-size:.85em;color:var(--muted);font-weight:600;}
+.tier-badge{display:inline-block;padding:8px 24px;border-radius:20px;font-weight:700;font-size:.95em;margin:12px 0;}
+.tier-mastery{background:#dcfce7;color:#166534;}
+.tier-proficiency{background:#dbeafe;color:#1e40af;}
+.tier-competency{background:#fef9c3;color:#854d0e;}
+.tier-foundational{background:#fee2e2;color:#991b1b;}
+.results-summary{background:var(--white);border-radius:12px;padding:24px;margin:20px 0;}
+.results-summary h3{font-size:1em;font-weight:700;color:var(--navy);margin-bottom:16px;}
+.q-result-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.88em;}
+.q-result-row:last-child{border-bottom:none;}
+.q-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+.dot-high{background:#059669;}
+.dot-mid{background:#f59e0b;}
+.dot-low{background:#dc2626;}
+.cert-section{background:var(--white);border-radius:12px;padding:24px;margin:20px 0;text-align:center;}
+.cert-section h3{font-size:1em;font-weight:700;color:var(--navy);margin-bottom:16px;}
+#certCanvas{border-radius:8px;max-width:100%;box-shadow:0 4px 20px rgba(0,0,0,.1);}
+.cert-buttons{display:flex;gap:12px;justify-content:center;margin-top:16px;flex-wrap:wrap;}
+.cert-buttons .btn{width:auto;}
+
+/* HUB NAV */
+.hub-section{background:var(--navy);padding:60px 24px;}
+.hub-inner{max-width:800px;margin:0 auto;}
+.hub-section h3{color:#fff;font-size:1.2em;font-weight:700;margin-bottom:6px;}
+.hub-section p{color:#778899;font-size:.9em;margin-bottom:28px;}
+.hub-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
+.hub-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:12px;padding:18px;text-decoration:none;transition:all .2s;display:block;}
+.hub-card:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);transform:translateY(-2px);}
+.hub-card.current-sim{border-color:rgba(24,119,242,.5);background:rgba(24,119,242,.08);}
+.hub-card .hw{font-size:.72em;color:var(--red);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;}
+.hub-card .hco{color:#fff;font-weight:700;font-size:.95em;}
+.hub-card .htopic{color:#556677;font-size:.78em;margin-top:4px;}
+.hub-card .hstatus{font-size:.72em;margin-top:8px;font-weight:600;}
+.status-done{color:#4ade80;}
+.status-available{color:var(--accent);}
+.status-locked{color:#445566;}
+
+/* ATTEMPT 2 PROMPT */
+.attempt2-wrap{background:var(--white);border-radius:12px;padding:28px;margin:20px 0;text-align:center;border:2px solid var(--accent);}
+.attempt2-wrap h3{color:var(--navy);font-weight:800;font-size:1.1em;margin-bottom:8px;}
+.attempt2-wrap p{color:var(--muted);font-size:.9em;margin-bottom:20px;}
+
+/* BLOCKED */
+.blocked-wrap{text-align:center;padding:60px 24px;max-width:500px;margin:0 auto;}
+.blocked-icon{font-size:3em;margin-bottom:16px;}
+.blocked-wrap h2{color:var(--navy);font-weight:800;margin-bottom:10px;}
+.blocked-wrap p{color:var(--muted);font-size:.95em;margin-bottom:24px;}
+
+/* CUMULATIVE FEEDBACK */
+.cumulative-card{margin:20px 0;}
+.cumulative-card h3{font-size:1em;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.comp-bar-row{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.comp-label{width:170px;font-size:.78em;font-weight:600;color:var(--text);flex-shrink:0;}
+.comp-track{flex:1;height:6px;background:#e5e7eb;border-radius:3px;overflow:hidden;}
+.comp-fill{height:6px;border-radius:3px;transition:width .6s ease;}
+.comp-pct{width:36px;font-size:.78em;font-weight:700;color:var(--muted);text-align:right;}
+.insight-box{margin-top:18px;background:var(--light);border-radius:10px;padding:18px;border-left:3px solid var(--accent);}
+.insight-label{font-size:.72em;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--accent);margin-bottom:8px;}
+.insight-text{font-size:.9em;color:#374151;line-height:1.75;}
+.strengths-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;}
+.strength-tag{background:rgba(5,150,105,.1);border:1px solid rgba(5,150,105,.25);color:#065f46;padding:4px 10px;border-radius:12px;font-size:.75em;font-weight:600;}
+.gap-tag{background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.2);color:#991b1b;padding:4px 10px;border-radius:12px;font-size:.75em;font-weight:600;}
+
+/* NEXT SIM PROMO */
+.next-sim-banner{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:12px;padding:20px 24px;margin:20px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.next-sim-banner h4{color:#fff;font-size:1em;font-weight:700;margin-bottom:4px;}
+.next-sim-banner p{color:#778899;font-size:.85em;}
+.btn-gold{background:linear-gradient(135deg,#c9a227,#e8c84a);color:#1a1a2e;font-weight:700;padding:10px 24px;border-radius:8px;border:none;cursor:pointer;font-size:.9em;text-decoration:none;display:inline-block;}
+.btn-gold:hover{opacity:.9;transform:translateY(-1px);}
+
+/* LEARN CARDS */
+.learn-wrap{max-width:620px;margin:0 auto;padding:32px 24px;}
+.learn-card{background:var(--white);border-radius:14px;padding:32px;box-shadow:0 2px 12px rgba(0,0,0,.06);display:none;}
+.learn-card.active{display:block;}
+.learn-card .learn-icon{font-size:2.4em;margin-bottom:16px;}
+.learn-card h3{font-size:1.15em;font-weight:800;color:var(--navy);margin-bottom:6px;}
+.learn-card .learn-subtitle{font-size:.85em;color:var(--accent);font-weight:600;margin-bottom:16px;}
+.learn-card p{font-size:.92em;color:#374151;line-height:1.75;margin-bottom:14px;}
+.learn-card .learn-apply{background:var(--accent-light);border-radius:10px;padding:18px;border-left:3px solid var(--accent);margin-top:16px;}
+.learn-card .learn-apply h4{font-size:.82em;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;}
+.learn-card .learn-apply p{font-size:.88em;color:#374151;margin-bottom:0;}
+.learn-card .learn-example{background:var(--light);border-radius:10px;padding:16px;margin-top:14px;}
+.learn-card .learn-example h4{font-size:.82em;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.learn-card .learn-example p{font-size:.85em;color:var(--muted);margin-bottom:0;font-style:italic;}
+.learn-card .learn-framework{background:#1a1a2e;border-radius:10px;padding:18px 20px;margin-top:14px;border-left:3px solid var(--accent);}
+.learn-card .learn-framework h4{font-size:.82em;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+.learn-card .learn-framework ol{list-style:none;padding:0;margin:0;counter-reset:fw;}
+.learn-card .learn-framework ol li{counter-increment:fw;font-size:.84em;color:rgba(255,255,255,.75);padding:5px 0;border-bottom:1px solid rgba(255,255,255,.06);line-height:1.5;}
+.learn-card .learn-framework ol li:last-child{border-bottom:none;}
+.learn-card .learn-framework ol li::before{content:counter(fw) ". ";color:var(--accent);font-weight:700;}
+.learn-card .learn-framework ol li span{color:rgba(255,255,255,.4);font-size:.9em;}
+.learn-nav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;}
+.learn-dots{display:flex;gap:8px;}
+.learn-dot{width:10px;height:10px;border-radius:50%;background:var(--border);transition:background .2s;}
+.learn-dot.active{background:var(--accent);}
+.learn-counter{font-size:.82em;color:var(--muted);font-weight:600;}
+
+/* SOURCES & DISCLAIMER */
+.sources-section{background:var(--white);border-radius:12px;padding:24px;margin:20px 0;}
+.sources-toggle{display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;}
+.sources-toggle h3{font-size:1em;font-weight:700;color:var(--navy);margin:0;}
+.sources-toggle .toggle-icon{font-size:1.2em;color:var(--muted);transition:transform .2s;}
+.sources-toggle .toggle-icon.open{transform:rotate(180deg);}
+.sources-content{display:none;margin-top:16px;padding-top:16px;border-top:1px solid var(--border);}
+.sources-content.open{display:block;}
+.sources-content ul{list-style:none;padding:0;}
+.sources-content li{font-size:.85em;color:#374151;padding:6px 0;border-bottom:1px solid #f0f0f0;line-height:1.6;}
+.sources-content li:last-child{border-bottom:none;}
+.sources-content li a{color:var(--accent);text-decoration:none;}
+.sources-content li a:hover{text-decoration:underline;}
+.sources-content .disclaimer-text{font-size:.82em;color:var(--muted);line-height:1.7;margin-top:14px;padding:14px;background:var(--light);border-radius:8px;}
+
+/* FOOTER */
+footer{background:#0d1117;color:#445566;text-align:center;padding:24px;font-size:.8em;}
+footer a{color:#556677;text-decoration:none;}
+
+@media(max-width:600px){
+  .nav-sims{display:none;}
+  .intro-grid{grid-template-columns:1fr;}
+  .sim-band h1{font-size:1.6em;}
+  .cert-buttons{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo" id="nav-logo" onclick="founderTap()">CXO <span>Simulabs</span></div>
+  <div class="nav-track">CPO Track</div>
+  <div class="nav-sims">
+    <a href="https://mohansimham.github.io/CPO-SIM-1-Airbnb/" class="nav-sim">SIM 1</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-2-Spotify/" class="nav-sim">SIM 2</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-3-Netflix/" class="nav-sim">SIM 3</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-4-Amazon/" class="nav-sim">SIM 4</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-5-Uber/" class="nav-sim">SIM 5</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-6-Zomato/" class="nav-sim">SIM 6</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-7-Slack/" class="nav-sim">SIM 7</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-8-Google/" class="nav-sim">SIM 8</a>
+    <a href="https://mohansimham.github.io/CPO-SIM-9-Meta/" class="nav-sim">SIM 9</a>
+    <a href="#" class="nav-sim current">SIM 10</a>
+  </div>
+</nav>
+
+<!-- PHASE: BLOCKED -->
+<div id="phase-blocked" class="phase">
+  <div class="sim-band"><div class="eyebrow">CPO Simulation 10 · Shopify</div><h1>Shopify: Product Roadmapping</h1></div>
+  <div class="center-wrap">
+    <div class="blocked-wrap">
+      <div class="blocked-icon">🔒</div>
+      <h2>Both Attempts Used</h2>
+      <p>You've completed both attempts for this simulation. Each simulation allows 2 attempts to give you a chance to improve your score.</p>
+      <p style="margin-top:16px;color:var(--accent);font-weight:600;">Ready for your next challenge?</p>
+      <div style="margin-top:24px;">
+        <a href="https://mohansimham.github.io/CPO-SIM-1-Airbnb/" class="btn btn-navy" style="display:inline-block;text-decoration:none;width:auto;">Try SIM 1 — Airbnb →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: EMAIL GATE -->
+<div id="phase-email" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CPO Simulation 10 · Shopify</div>
+    <h1>Shopify: Product Roadmapping</h1>
+    <p>10 pivotal moments. Real product decisions. How would you have built it?</p>
+  </div>
+  <div class="center-wrap">
+    <div class="card">
+      <h2 style="font-size:1.2em;font-weight:800;color:var(--navy);margin-bottom:6px;">Let's get started</h2>
+      <p style="font-size:.88em;color:var(--muted);margin-bottom:24px;">We'll send your personalised certificate to your email when you complete the simulation.</p>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="input-name" placeholder="First and last name" autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" id="input-email" placeholder="your@email.com" autocomplete="email">
+        <div class="form-note">Used to send your certificate and improve your experience. No spam.</div>
+      </div>
+      <div id="email-error" class="error-msg">Please enter a valid name and email address.</div>
+      <button class="btn btn-primary" onclick="sendOTP()" id="send-otp-btn" style="margin-top:8px;">Send Verification Code →</button>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: OTP -->
+<div id="phase-otp" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CPO Simulation 10 · Shopify</div>
+    <h1>Check Your Email</h1>
+    <p>Enter the 6-digit code we just sent you.</p>
+  </div>
+  <div class="center-wrap">
+    <div class="card">
+      <h2 style="font-size:1.1em;font-weight:800;color:var(--navy);margin-bottom:6px;">Verify your email</h2>
+      <p style="font-size:.88em;color:var(--muted);margin-bottom:24px;">Code sent to <strong id="otp-email-display"></strong>. Expires in <span id="otp-timer">10:00</span>.</p>
+      <div class="form-group">
+        <label>Verification Code</label>
+        <input type="text" id="input-otp" class="otp-input" placeholder="000000" maxlength="6" inputmode="numeric">
+      </div>
+      <div id="otp-error" class="error-msg">Incorrect code. Please try again.</div>
+      <div id="otp-success" class="success-msg">✓ Email verified!</div>
+      <button class="btn btn-primary" onclick="verifyOTP()" style="margin-top:8px;">Verify & Start Simulation →</button>
+      <p style="font-size:.82em;color:var(--muted);margin-top:14px;text-align:center;">Didn't get it? <span class="resend-link" onclick="resendOTP()">Resend code</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: INTRO -->
+<div id="phase-intro" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CPO Simulation 10 · Shopify</div>
+    <h1>Shopify: Product Roadmapping</h1>
+    <p>You're the Product Manager. 10 real scenarios. What do you decide?</p>
+  </div>
+  <div class="center-wrap">
+    <div class="card">
+      <div id="attempt-badge-display" class="attempt-badge">🎯 Attempt 1 of 2</div>
+      <h2 style="font-size:1.1em;font-weight:800;color:var(--navy);margin-bottom:10px;">What you'll be tested on</h2>
+      <div class="intro-grid">
+        <div class="intro-card"><h4>Roadmap Strategy</h4><p>Building outcome-driven roadmaps that align product vision with business goals and merchant needs.</p></div>
+        <div class="intro-card"><h4>Prioritisation & Sequencing</h4><p>Deciding what to build now, next, and later — and defending those trade-offs to stakeholders.</p></div>
+        <div class="intro-card"><h4>Platform Evolution</h4><p>Evolving a platform roadmap across SMB, enterprise, and ecosystem without breaking what works.</p></div>
+        <div class="intro-card"><h4>Roadmap Communication</h4><p>Communicating roadmap decisions to merchants, developers, investors, and internal teams.</p></div>
+      </div>
+      <p style="font-size:.85em;color:var(--muted);margin-bottom:20px;">10 questions · Multiple choice · Feedback after every answer · ~15 minutes</p>
+      <button class="btn btn-primary" onclick="showPhase('learn')">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: LEARN -->
+<div id="phase-learn" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">CPO Simulation 10 · Shopify</div>
+    <h1>Before You Begin</h1>
+    <p>A quick refresher on the frameworks you'll apply in this simulation.</p>
+  </div>
+  <div class="learn-wrap">
+
+
+    <div class="learn-card active" data-learn="0">
+      <div class="learn-icon">🗺️</div>
+      <h3>Now / Next / Later Roadmaps</h3>
+      <div class="learn-subtitle">Time-horizon planning without false precision</div>
+      <p>Traditional roadmaps with specific dates create two problems: they commit teams to solutions before they understand the problem, and they set expectations that rarely survive contact with reality. The Now/Next/Later framework groups work by time horizon rather than date, giving teams clarity on priorities without the rigidity of a Gantt chart. "Now" is committed work in progress. "Next" is validated problems queued for the next cycle. "Later" is strategic bets under exploration.</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>Define clear criteria for what moves between horizons. "Now" items should have defined scope, assigned teams, and success metrics. "Next" items need validated user problems and rough sizing. "Later" items are strategic hypotheses that need research before committing resources. Review the roadmap quarterly: promote, demote, or remove items based on new data.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>Shopify's product team uses outcome-based planning rather than feature-based timelines. When building Shopify Payments, the roadmap wasn't "launch payment processing by Q3." It was: "Now — reduce checkout abandonment by 15% with integrated payments. Next — expand to 5 new countries. Later — explore embedded financial services for merchants." Each horizon had different levels of certainty and commitment.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Now / Next / Later Template</h4>
+        <ol>
+          <li>Now (0-6 weeks) <span>— Committed. Scoped. Team assigned. Success metrics defined. Shipping this cycle.</span></li>
+          <li>Next (6-12 weeks) <span>— Validated problem. Solution exploration in progress. Roughly sized. Queued for next cycle.</span></li>
+          <li>Later (3-6 months) <span>— Strategic hypothesis. Needs research/discovery. No commitment yet. May be promoted or killed.</span></li>
+          <li>Horizon Criteria <span>— What evidence moves an item from Later → Next? From Next → Now? Define promotion triggers.</span></li>
+          <li>Review Cadence <span>— Weekly standup on Now. Biweekly review of Next. Monthly strategic review of Later.</span></li>
+          <li>Stakeholder View <span>— Engineers see Now detail. Execs see all three. Merchants see Now + directional Next.</span></li>
+          <li>Kill Criteria <span>— When do you remove items entirely? Data disproves hypothesis? Strategy shift? Resource constraint?</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">1 of 4</span>
+        <div class="learn-dots"><span class="learn-dot active"></span><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="nextLearnCard()">Next →</button>
+      </div>
+    </div>
+
+    <div class="learn-card" data-learn="1">
+      <div class="learn-icon">🎯</div>
+      <h3>Outcome-Based Roadmapping</h3>
+      <div class="learn-subtitle">Roadmap what you'll achieve, not what you'll build</div>
+      <p>Feature roadmaps answer "What are we building?" Outcome roadmaps answer "What will change for our users and business?" The difference matters because features are bets — you think they'll drive the outcome, but you might be wrong. When you commit to outcomes instead of features, teams have freedom to find the best solution rather than building a predetermined feature that may not work.</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>Frame every roadmap item as a measurable outcome: "Reduce merchant onboarding time from 3 days to 3 hours" not "Build new onboarding wizard." Define key results that prove the outcome is achieved. Let teams propose and iterate on solutions. If the first solution doesn't move the metric, they pivot — the roadmap commitment is to the outcome, not the feature.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>When Shopify planned its international expansion, the outcome wasn't "launch in 10 new countries." It was "enable 100,000 merchants outside North America to reach $1M in GMV within 12 months." This outcome framing meant the team could pursue multiple strategies — local payment methods, translated checkout, regional shipping integrations — and measure success by merchant revenue, not country count.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Outcome-Based Roadmap Template</h4>
+        <ol>
+          <li>Strategic Theme <span>— Which company objective does this serve? (e.g., "Merchant retention" or "International growth")</span></li>
+          <li>Target Outcome <span>— Measurable change in user behaviour or business metric. Specific, time-bound, ambitious but achievable.</span></li>
+          <li>Key Results <span>— 2-3 metrics that prove the outcome is happening. Leading indicators preferred over lagging.</span></li>
+          <li>Current State <span>— Where are we today on this metric? What's the baseline? Why is the current state unacceptable?</span></li>
+          <li>Solution Hypotheses <span>— 2-3 potential approaches. These are bets, not commitments. Will be validated through discovery.</span></li>
+          <li>Dependencies <span>— What other teams, platforms, or decisions does this outcome depend on?</span></li>
+          <li>Investment Level <span>— T-shirt size (S/M/L/XL). How many people, for how long? Rough order of magnitude.</span></li>
+          <li>Confidence Level <span>— High/Medium/Low. How sure are we this outcome is achievable? What would increase confidence?</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">2 of 4</span>
+        <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot active"></span><span class="learn-dot"></span><span class="learn-dot"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="nextLearnCard()">Next →</button>
+      </div>
+    </div>
+
+    <div class="learn-card" data-learn="2">
+      <div class="learn-icon">⚖️</div>
+      <h3>Roadmap Trade-offs</h3>
+      <div class="learn-subtitle">Every "yes" is a hundred "no"s — making trade-offs explicit</div>
+      <p>The hardest part of roadmapping isn't deciding what to build — it's deciding what NOT to build and defending that decision. Every item on your roadmap displaces something else. Stakeholders, merchants, and executives all have legitimate needs that compete for limited engineering capacity. The PM's job isn't to make everyone happy — it's to make the trade-offs explicit and ensure the highest-impact work gets done first.</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>For every roadmap decision, document what you're NOT doing and why. Create a "not doing" list that's as visible as your roadmap. Use a consistent scoring framework (RICE, ICE, or weighted scoring) so trade-offs are based on data, not politics. When stakeholders push back, show the trade-off: "We can do X, but it means delaying Y by one quarter. Here's the impact of each."</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>Shopify constantly balances its roadmap between serving existing SMB merchants (retention) and building for enterprise merchants via Shopify Plus (expansion). When the team decided to invest heavily in Shopify Plus features like B2B wholesale channels and custom checkout extensibility, they explicitly deprioritised several SMB-requested features. The trade-off was documented: "Enterprise GMV is growing 3x faster than SMB. Each Plus merchant generates 50x the revenue of an SMB merchant. This quarter, we prioritise Plus."</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Roadmap Trade-off Framework</h4>
+        <ol>
+          <li>Impact Scoring <span>— Score each item on reach, impact, confidence, and effort (RICE). Make the math visible.</span></li>
+          <li>Strategic Alignment <span>— Does this item serve a top-3 company objective? If not, it needs exceptional justification.</span></li>
+          <li>Opportunity Cost <span>— What gets delayed or killed if we do this? Name the specific items displaced.</span></li>
+          <li>Reversibility <span>— Is this decision reversible? Irreversible decisions deserve more analysis. Reversible ones deserve speed.</span></li>
+          <li>Stakeholder Impact <span>— Who benefits? Who's harmed? Are we over-indexing on one stakeholder group?</span></li>
+          <li>Not-Doing List <span>— Publish what you're explicitly NOT building this quarter. Explain why. Review quarterly.</span></li>
+          <li>Escalation Path <span>— When stakeholders disagree with trade-offs, what's the escalation process? Who decides?</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">3 of 4</span>
+        <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot active"></span><span class="learn-dot"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="nextLearnCard()">Next →</button>
+      </div>
+    </div>
+
+    <div class="learn-card" data-learn="3">
+      <div class="learn-icon">🔄</div>
+      <h3>Platform Roadmap Evolution</h3>
+      <div class="learn-subtitle">Growing a platform without breaking what works</div>
+      <p>Platform roadmaps are uniquely complex because every change affects multiple stakeholders: end users, developers building on your platform, internal teams, and partners. A new API version that excites developers might break existing integrations. A feature that delights new merchants might confuse power users. Platform roadmapping requires thinking in ecosystems, not features — every change ripples outward.</p>
+      <div class="learn-apply">
+        <h4>How to apply it</h4>
+        <p>Categorise roadmap items by their blast radius: internal-only changes, merchant-facing changes, developer-facing changes, and ecosystem-wide changes. Each category needs different communication timelines, migration paths, and feedback loops. For breaking changes, provide 6-12 months notice, migration tools, and clear deprecation schedules. Never surprise your ecosystem.</p>
+      </div>
+      <div class="learn-example">
+        <h4>Example</h4>
+        <p>Shopify's App Store ecosystem has 8,000+ third-party apps built by developers who depend on Shopify's APIs. When Shopify redesigned its checkout architecture (Checkout Extensibility), the platform team provided an 18-month migration timeline, extensive documentation, migration tools, and partner support. They couldn't just ship the new checkout — they had to roadmap the migration itself, treating developers as first-class stakeholders in the platform evolution.</p>
+      </div>
+      <div class="learn-framework">
+        <h4>Platform Evolution Checklist</h4>
+        <ol>
+          <li>Ecosystem Audit <span>— Who builds on your platform? How many apps/integrations? What breaks if you change X?</span></li>
+          <li>Blast Radius <span>— Internal only? Merchant-facing? Developer-facing? Ecosystem-wide? Each needs different process.</span></li>
+          <li>Migration Path <span>— For breaking changes: deprecation timeline, migration tools, documentation, support plan.</span></li>
+          <li>Communication Plan <span>— Developers need 6-12 months notice. Merchants need 3 months. Internal teams need 1 month.</span></li>
+          <li>Versioning Strategy <span>— API versioning, feature flags, gradual rollout. How do old and new coexist during transition?</span></li>
+          <li>Feedback Loops <span>— Developer forums, merchant advisory boards, beta programmes. How do stakeholders influence the roadmap?</span></li>
+          <li>Success Metrics <span>— Adoption rate of new features, migration completion %, developer satisfaction, ecosystem health.</span></li>
+        </ol>
+      </div>
+      <div class="learn-nav">
+        <span class="learn-counter">4 of 4</span>
+        <div class="learn-dots"><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot"></span><span class="learn-dot active"></span></div>
+        <button class="btn btn-primary" style="width:auto;padding:10px 24px;" onclick="startSim()">Start Simulation →</button>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- PHASE: QUESTIONS -->
+<div id="phase-questions" class="phase">
+  <div class="progress-bar-wrap">
+    <div class="progress-top">
+      <span class="progress-label" id="q-progress-label">Question 1 of 10</span>
+      <span class="progress-label" id="q-score-label">Score: 0</span>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  </div>
+  <div class="q-wrap">
+    <div class="scenario-box">
+      <div class="scenario-label">Scenario</div>
+      <div class="scenario-text" id="q-scenario"></div>
+    </div>
+    <div class="q-text" id="q-question"></div>
+    <div class="options" id="q-options"></div>
+    <div class="feedback-box" id="q-feedback" style="display:none;">
+      <div class="fb-label">Expert Analysis</div>
+      <div id="q-feedback-text"></div>
+    </div>
+    <div class="next-btn-wrap">
+      <button class="btn btn-navy" id="next-btn" onclick="nextQuestion()" style="display:none;">Next Question →</button>
+    </div>
+  </div>
+</div>
+
+<!-- PHASE: RESULTS -->
+<div id="phase-results" class="phase">
+  <div class="sim-band">
+    <div class="eyebrow">Simulation Complete</div>
+    <h1 id="results-heading">Your Results</h1>
+  </div>
+  <div class="results-wrap">
+
+    <div class="card" style="text-align:center;margin-bottom:20px;">
+      <div class="score-ring-wrap">
+        <div class="score-ring">
+          <canvas id="scoreRingCanvas" width="160" height="160"></canvas>
+          <div class="score-center">
+            <div class="score-num" id="result-pct">0%</div>
+            <div class="score-pct" id="result-score-label">0 / 0</div>
+          </div>
+        </div>
+      </div>
+      <div class="tier-badge" id="tier-badge">Strategic Mastery</div>
+      <p id="tier-feedback" style="color:var(--muted);font-size:.9em;max-width:480px;margin:0 auto;"></p>
+    </div>
+
+    <!-- Next Sim Banner (prominent) -->
+    <div class="next-sim-banner" id="next-sim-banner" style="display:none;">
+      <div>
+        <h4>Up next: SIM 1 — Airbnb</h4>
+        <p>Platform Decisions · Strategic Thinking · Stakeholder Management · 10 new decisions</p>
+      </div>
+      <a href="https://mohansimham.github.io/CPO-SIM-1-Airbnb/" class="btn-gold">Start SIM 1 →</a>
+    </div>
+
+    <div class="results-summary">
+      <h3>Decision Analysis — Expert Feedback on Every Choice</h3>
+      <div id="q-breakdown"></div>
+    </div>
+
+    <!-- Cumulative Feedback -->
+    <div class="card cumulative-card" id="cumulative-section">
+      <h3>Your CPO Profile</h3>
+      <p style="font-size:.82em;color:var(--muted);margin-bottom:20px;">Based on your decision patterns across all 10 scenarios</p>
+      <div id="competency-bars"></div>
+      <div class="insight-box">
+        <div class="insight-label">Strategic Insight</div>
+        <div class="insight-text" id="insight-text"></div>
+        <div style="margin-top:14px;">
+          <div style="font-size:.75em;font-weight:700;color:#059669;margin-bottom:6px;">STRENGTHS</div>
+          <div class="strengths-row" id="strength-tags"></div>
+        </div>
+        <div style="margin-top:12px;">
+          <div style="font-size:.75em;font-weight:700;color:#dc2626;margin-bottom:6px;">DEVELOP FURTHER</div>
+          <div class="strengths-row" id="gap-tags"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Attempt 2 prompt (shown if attempt 1 done) -->
+    <div class="attempt2-wrap" id="attempt2-prompt" style="display:none;">
+      <h3>Try Attempt 2?</h3>
+      <p>Different questions, same competencies. Can you improve your score?</p>
+      <button class="btn btn-primary" onclick="startAttempt2()" style="width:auto;padding:12px 32px;">Start Attempt 2 →</button>
+    </div>
+
+    <div class="cert-section">
+      <h3>Your Certificate</h3>
+      <p style="font-size:.82em;color:var(--muted);margin-bottom:16px;">Download the certificate for LinkedIn or the square badge for Instagram, WhatsApp and other social media.</p>
+      <canvas id="certCanvas" width="1200" height="850"></canvas>
+      <div class="cert-buttons" style="margin-top:14px;">
+        <button class="btn btn-navy" onclick="downloadCert()" style="width:auto;">↓ Certificate (LinkedIn)</button>
+        <button class="btn btn-navy" onclick="downloadBadge()" style="width:auto;">↓ Badge (Instagram)</button>
+        <button class="btn btn-outline" onclick="shareLinkedIn()" style="width:auto;">Share LinkedIn</button>
+        <button class="btn btn-outline" onclick="shareTwitter()" style="width:auto;">Share X / Twitter</button>
+        <button class="btn btn-outline" onclick="shareWhatsApp()" style="width:auto;">Share WhatsApp</button>
+        <button class="btn btn-outline" onclick="copyLink()" style="width:auto;" id="copy-link-btn">Copy Link</button>
+      </div>
+      <!-- Hidden badge canvas -->
+      <canvas id="badgeCanvas" width="1080" height="1080" style="display:none;"></canvas>
+    </div>
+
+    <!-- Sources & Disclaimer -->
+    <div class="sources-section">
+      <div class="sources-toggle" onclick="this.querySelector('.toggle-icon').classList.toggle('open');this.nextElementSibling.classList.toggle('open');">
+        <h3>Sources & Disclaimer</h3>
+        <span class="toggle-icon">▼</span>
+      </div>
+      <div class="sources-content">
+        <ul>
+          <li>Shopify Inc. SEC Filings — 10-K Annual Reports, investor presentations — <a href="https://investors.shopify.com/" target="_blank">investors.shopify.com</a></li>
+          <li>Shopify Engineering Blog — platform architecture, scaling decisions — <a href="https://shopify.engineering/" target="_blank">shopify.engineering</a></li>
+          <li>"The Shopify Story" — company history and product evolution documentation</li>
+          <li>Shopify Editions announcements — public product roadmap communications — <a href="https://www.shopify.com/editions" target="_blank">shopify.com/editions</a></li>
+          <li>Tobi Lutke, Harley Finkelstein, and Glen Coates interviews — product strategy at Shopify</li>
+          <li>Shopify Partner and Developer documentation — API versioning, platform evolution</li>
+          <li>Industry analyses from CB Insights, Gartner, and Forrester on Shopify's commerce strategy</li>
+        </ul>
+        <div class="disclaimer-text">
+          <strong>Disclaimer:</strong> CXO Simulabs is an independent educational platform. Shopify and related marks are trademarks of Shopify Inc. This simulation is not affiliated with, endorsed by, or sponsored by Shopify Inc. All scenarios are inspired by publicly available information and may include dramatised elements for educational purposes. Dialogue attributed to individuals is fictional and does not represent actual statements. Financial figures are from public filings and published reports where available; some figures are approximations used for educational purposes. This is not a professional certification or accreditation.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- HUB NAV -->
+  <div class="hub-section">
+    <div class="hub-inner">
+      <h3>CPO Track — All Simulations</h3>
+      <p>Each simulation tests a different set of CPO competencies. Start anywhere.</p>
+      <div class="hub-grid">
+        <a href="https://mohansimham.github.io/CPO-SIM-1-Airbnb/" class="hub-card">
+          <div class="hw">SIM 1</div>
+          <div class="hco">Airbnb</div>
+          <div class="htopic">Strategic Thinking · Stakeholder Mgmt · Risk</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-2-Spotify/" class="hub-card">
+          <div class="hw">SIM 2</div>
+          <div class="hco">Spotify</div>
+          <div class="htopic">Business Model · Porter's Five Forces · OKRs</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-3-Netflix/" class="hub-card">
+          <div class="hw">SIM 3</div>
+          <div class="hco">Netflix</div>
+          <div class="htopic">Jobs-to-Be-Done · A/B Testing · User Research</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-4-Amazon/" class="hub-card">
+          <div class="hw">SIM 4</div>
+          <div class="hco">Amazon Prime</div>
+          <div class="htopic">RICE · MoSCoW · Kano Model</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-5-Uber/" class="hub-card">
+          <div class="hw">SIM 5</div>
+          <div class="hco">Uber</div>
+          <div class="htopic">Market Sizing · Unit Economics · 5 Whys</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-6-Zomato/" class="hub-card">
+          <div class="hw">SIM 6</div>
+          <div class="hco">Zomato</div>
+          <div class="htopic">RICE · MoSCoW · Kano · ICE Scoring</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-7-Slack/" class="hub-card">
+          <div class="hw">SIM 7</div>
+          <div class="hco">Slack</div>
+          <div class="htopic">Rapid Prototyping · MVP · Pivot Strategy</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-8-Google/" class="hub-card">
+          <div class="hw">SIM 8</div>
+          <div class="hco">Google</div>
+          <div class="htopic">PRDs · Design Docs · Launch Review</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <a href="https://mohansimham.github.io/CPO-SIM-9-Meta/" class="hub-card">
+          <div class="hw">SIM 9</div>
+          <div class="hco">Meta</div>
+          <div class="htopic">AI Feature Design · ML Lifecycle · AI Safety</div>
+          <div class="hstatus status-available">→ Play now</div>
+        </a>
+        <div class="hub-card current-sim">
+          <div class="hw">SIM 10 · Current</div>
+          <div class="hco">Shopify</div>
+          <div class="htopic">Roadmapping · Prioritisation · Platform Evolution</div>
+          <div class="hstatus status-done">✓ Completed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 CXO Simulabs · <a href="https://www.cxosimulabs.com">cxosimulabs.com</a> · <a href="https://www.cxosimulabs.com/privacy.html">Privacy</a> · <a href="https://www.cxosimulabs.com/terms.html">Terms</a></p>
+    <p style="margin-top:8px;font-size:.75em;color:#334455;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.6;">CXO Simulabs is an independent educational platform. Shopify and related marks are trademarks of Shopify Inc. This simulation is not affiliated with, endorsed by, or sponsored by Shopify Inc. Scenarios are inspired by publicly available information and may include dramatised elements for educational purposes. This is not a professional certification. All dialogue is fictional and does not represent actual statements by any named individual.</p>
+  </footer>
+</div>
+
+<script>
+// ─── FOUNDER MODE ─────────────────────────────────────────
+let _founderTaps=0, _founderTimer=null;
+function founderTap(){
+  _founderTaps++;
+  clearTimeout(_founderTimer);
+  _founderTimer=setTimeout(()=>_founderTaps=0,600);
+  if(_founderTaps>=3){ enterFounderMode(); _founderTaps=0; }
+}
+function enterFounderMode(){
+  Object.values(LS).forEach(k=>localStorage.removeItem(k));
+  state.name='Founder Preview';
+  state.email='founder@cxosimulabs.com';
+  state.currentAttempt=1;
+  // Badge
+  if(!document.getElementById('founder-badge')){
+    const b=document.createElement('div');
+    b.id='founder-badge';
+    b.style.cssText='position:fixed;bottom:16px;right:16px;background:#1a1a2e;color:#fff;padding:8px 16px;border-radius:8px;font-size:.78em;font-weight:600;z-index:9999;border:1px solid rgba(226,55,68,.4);cursor:pointer;';
+    b.innerHTML='🔧 Founder Preview &nbsp;<span style="color:#e23744;" onclick="exitFounderMode()">✕ Exit</span>';
+    document.body.appendChild(b);
+  }
+  document.getElementById('attempt-badge-display').textContent='🔧 Preview Mode';
+  showPhase('intro');
+}
+function exitFounderMode(){
+  const b=document.getElementById('founder-badge');
+  if(b) b.remove();
+  location.reload();
+}
+
+// ─── COMPETENCY MAP ───────────────────────────────────────
+const COMP_MAP = [
+  {name:'Roadmap Strategy'},
+  {name:'Prioritisation'},
+  {name:'Sequencing'},
+  {name:'Trade-off Decisions'},
+  {name:'Platform Evolution'},
+  {name:'Ecosystem Management'},
+  {name:'Stakeholder Alignment'},
+  {name:'Migration Planning'},
+  {name:'Roadmap Communication'},
+  {name:'Strategic Pivoting'},
+];
+
+// ─── CONFIG ───────────────────────────────────────────────
+const EJS_KEY      = 'ABWpMkWPOTsO_gQWG';
+const EJS_SERVICE  = 'service_a6x573k';
+const EJS_TEMPLATE = 'template_xt90q9j';
+emailjs.init(EJS_KEY);
+
+const LS = {
+  name:      'cxo_cpo10_name',
+  email:     'cxo_cpo10_email',
+  attempts:  'cxo_cpo10_attempts',
+  scores:    'cxo_cpo10_scores',
+};
+
+// ─── STATE ────────────────────────────────────────────────
+let state = {
+  name:'', email:'',
+  otp:'', otpExpiry:0, otpAttempts:0,
+  timerInterval:null,
+  currentAttempt:1,
+  currentQ:0,
+  answers:[],
+  totalScore:0, maxScore:0,
+};
+
+// ─── QUESTIONS ────────────────────────────────────────────
+const Q = {
+  1: [
+    {
+      scenario:`2015 — The Shopify Payments Roadmap\n\nShopify's merchants are losing sales because the checkout process is fragmented. Merchants must integrate third-party payment gateways (Stripe, PayPal, Authorize.net), each with different APIs, fee structures, and settlement timelines. 23% of merchants cite "payment setup complexity" as their biggest onboarding friction.\n\nThe product team proposes Shopify Payments — a built-in payment processor that eliminates the need for third-party gateways. It would be deeply integrated into the checkout, offer instant setup, and give Shopify a new revenue stream (payment processing fees).\n\nBut the payments team can only launch in one country initially. The roadmap question: how do you sequence the multi-country rollout?`,
+      question:`How do you structure the Shopify Payments geographic roadmap?`,
+      options:[
+        {text:"Launch in all major English-speaking markets simultaneously (US, Canada, UK, Australia) — these share language, similar payment regulations, and Shopify's largest merchant bases",points:5,feedback:"Simultaneous multi-market launch sounds efficient but multiplies regulatory risk. Each country has different payment regulations, banking partnerships, PCI compliance requirements, and currency handling. Launching in four markets means four sets of banking partnerships, four regulatory approvals, and four potential failure points on day one. If something goes wrong (chargebacks, settlement delays, regulatory issues), you're fighting fires in four countries instead of learning from one. Shopify Payments actually launched in the US first, then expanded country-by-country over 18 months."},
+        {text:"Launch in the US first (largest merchant base, most mature payment infrastructure), learn from merchant behaviour and operational challenges, then expand to one new country per quarter based on merchant demand data and regulatory readiness",points:10,feedback:"Sequential rollout with learning loops is the right approach for payments — a domain where errors have direct financial consequences. The US launch provides the highest merchant coverage (Shopify's largest market) and the most mature payment infrastructure for learning. 'One country per quarter' creates a predictable cadence that operations, legal, and engineering teams can plan around. Using merchant demand data to sequence countries ensures you're expanding where the impact is highest. Shopify Payments actually followed this pattern: US first, then Canada, then UK, expanding to 17+ countries over several years. Each country launch incorporated lessons from previous ones."},
+        {text:"Launch in Canada first (Shopify's home market, smaller scale for testing), prove the model, then expand to the US for maximum impact",points:7,feedback:"Starting in your home market for testing is a defensible strategy, and Shopify being Canadian makes Canada a natural first choice. However, Canada represents a much smaller merchant base than the US, which means less data to learn from and less revenue to justify the investment. The payment processing economics (interchange rates, banking partnerships, fraud patterns) are also different between Canada and the US, so Canadian learnings may not fully transfer. Starting in the US is riskier but generates 10x the data and revenue, which funds faster expansion. That said, this approach isn't wrong — it's a lower-risk, lower-reward sequence."},
+        {text:"Don't build Shopify Payments — instead, build a better payment gateway marketplace with standardised APIs. Let specialists handle payments while Shopify focuses on commerce.",points:3,feedback:"This ignores the strategic value of owning the payment layer. Payments aren't just a feature — they're a data goldmine (transaction patterns, merchant health, buyer behaviour) and a recurring revenue stream. Third-party gateways take 2.9% + 30¢ per transaction with none of that data flowing back to Shopify. Owning payments means Shopify knows real-time GMV, can offer merchant financing (Shopify Capital), and controls the checkout experience end-to-end. Shopify Payments now processes the majority of Shopify's GMV and is the company's fastest-growing revenue segment. Outsourcing this would have been a massive strategic error."},
+      ]
+    },
+    {
+      scenario:`2017 — The Shopify Plus Roadmap Tension\n\nShopify Plus (the enterprise tier) is growing 100%+ year-over-year. Enterprise merchants like Allbirds, Gymshark, and Heinz are choosing Shopify Plus over Magento and Salesforce Commerce Cloud. But enterprise merchants demand features that SMB merchants don't need: custom checkout flows, B2B wholesale channels, advanced permissions, and dedicated support.\n\nThe core Shopify platform team has a packed roadmap serving 1M+ SMB merchants. The Plus team wants dedicated engineering resources for enterprise features. The tension: every engineer building Plus features is an engineer NOT improving the core platform that serves the vast majority of merchants.\n\nYou need to decide how to roadmap Shopify Plus features.`,
+      question:`How do you balance the Plus roadmap against the core platform roadmap?`,
+      options:[
+        {text:"Create a dedicated Plus engineering team with its own roadmap, separate from the core platform team — enterprise merchants need dedicated focus",points:5,feedback:"Separate teams create separate codebases, which creates technical debt. If Plus has its own checkout logic, its own permissions system, and its own admin, every core improvement must be duplicated or Plus falls behind. Shopify learned this lesson: early Plus features were built as bolt-ons that became maintenance nightmares. The better approach is extensibility — build the core platform to be flexible enough that Plus features are configurations and extensions, not separate codebases. Separate teams also create organisational silos where Plus and core teams compete for shared resources (design, infrastructure, QA)."},
+        {text:"Build Plus features as extensions of the core platform — invest in platform extensibility (APIs, scripting, custom workflows) so that enterprise needs are met through configuration, not separate code. Roadmap the extensibility layer as a core platform investment.",points:10,feedback:"This is exactly Shopify's strategy, and it's the architectural insight that let Shopify scale from SMB to enterprise without fragmenting the product. By investing in extensibility (Shopify Functions, Checkout Extensions, custom APIs), enterprise features become possible through the SAME platform that SMB merchants use. An SMB merchant gets a simple checkout. An enterprise merchant uses the same checkout with custom extensions for B2B pricing, loyalty integration, or conditional discounts. The extensibility investment benefits everyone — SMB app developers can build richer integrations, while Plus merchants get the customisation they need. This approach requires more upfront investment but prevents the two-codebase trap."},
+        {text:"Focus 100% on the core platform — Plus merchants chose Shopify because of the core product's simplicity and reliability. Adding enterprise complexity risks ruining what made Shopify successful.",points:4,feedback:"Protecting the core is important, but ignoring enterprise needs means losing the fastest-growing, highest-revenue segment. Each Plus merchant generates 50x+ the revenue of an SMB merchant. Plus merchants also attract developer ecosystem investment and brand credibility that benefits the entire platform. The fear that enterprise features will 'ruin simplicity' is a false trade-off IF you design for extensibility. Apple's iPhone serves casual users and power users with the same OS — it doesn't build a separate phone for enterprises. Shopify can serve both audiences through configuration and extension, not complexity."},
+        {text:"Alternate quarters: Q1 for Plus features, Q2 for core features, Q3 for Plus, Q4 for core — ensure both audiences get dedicated investment",points:3,feedback:"Quarterly alternation creates the worst of both worlds. Plus merchants wait 6 months between feature cycles, so they evaluate competitors during the gaps. Core merchants see development slow to half-speed. Engineering teams context-switch between completely different problem domains every quarter, which destroys productivity. The issue isn't TIME allocation — it's ARCHITECTURE. Build the extensibility layer that serves both audiences simultaneously, and every quarter's work benefits both Plus and core merchants."},
+      ]
+    },
+    {
+      scenario:`2019 — The Shopify Fulfillment Network Decision\n\nAmazon's FBA (Fulfillment by Amazon) is the biggest competitive threat to Shopify. Amazon offers merchants warehousing, picking, packing, and 2-day shipping — but at the cost of merchant independence (Amazon controls the customer relationship and data).\n\nShopify proposes building its own fulfillment network (SFN) — a network of warehouses that gives merchants Amazon-like logistics while keeping the customer relationship with the merchant. The investment would be $1 billion+ over several years.\n\nThe roadmap question is critical: fulfillment is a physical infrastructure bet, not a software feature. It can't be iterated like code.`,
+      question:`How do you roadmap the Shopify Fulfillment Network?`,
+      options:[
+        {text:"Build it all at once — lease 10 warehouses across the US, hire operations teams, and launch with full geographic coverage to compete with Amazon FBA from day one",points:2,feedback:"This is a $1B+ bet on unvalidated demand with zero operational experience. Shopify has never run warehouses. The company's entire competitive advantage is software and platform thinking. Jumping straight to 10 warehouses means 10 chances to fail simultaneously before learning what works. Amazon built FBA over 15 years, starting with their own inventory before opening to third-party sellers. Shopify can't skip that learning curve by spending more money. Physical infrastructure mistakes are expensive and irreversible — a bad warehouse lease is a 5-10 year commitment."},
+        {text:"Start with 2-3 strategically located warehouses, partner with existing 3PL providers for the rest, validate merchant demand and operational capability, then expand based on data — treating it as a phased roadmap with clear go/no-go criteria at each stage",points:10,feedback:"Phased rollout with go/no-go gates is essential for physical infrastructure bets. Starting with 2-3 warehouses lets Shopify learn warehouse operations, test merchant onboarding, measure fulfillment speed, and validate unit economics — all before committing to national scale. Partnering with 3PLs for geographic coverage fills gaps without capital commitment. Clear go/no-go criteria ('Is merchant retention 20% higher with SFN? Is cost-per-shipment below $X? Is merchant NPS above Y?') prevent sunk-cost escalation. Shopify actually followed this approach, starting small and later pivoting the strategy entirely when the data showed a different model was more viable."},
+        {text:"Don't build fulfillment — instead, build a 'Shopify Shipping' marketplace that integrates best-in-class 3PL providers. Let specialists handle warehouses while Shopify provides the software layer.",points:7,feedback:"This is actually close to where Shopify eventually landed after initial SFN experiments. Shopify ultimately partnered with logistics companies rather than operating warehouses itself, building a software orchestration layer (Shopify Fulfillment Network powered by Deliverr, which Shopify acquired) rather than running physical operations. The insight: Shopify's competitive advantage is software, not warehouse management. However, arriving at this conclusion required the data from early SFN experiments. Without testing the owned-warehouse model, you wouldn't know that the partnership model was superior. The roadmap should include both options with clear evaluation criteria."},
+        {text:"Acquire an existing fulfillment company — buy the operational expertise rather than building it from scratch",points:6,feedback:"Acquisition accelerates capability but doesn't eliminate the roadmapping challenge. You still need to integrate the acquired company's systems with Shopify's platform, migrate merchants to the new fulfillment system, and decide the geographic expansion sequence. Shopify actually did acquire Deliverr in 2022 for $2.1B — but this came AFTER several years of organic SFN experimentation that taught them what to look for in an acquisition target. Acquiring without first understanding the domain through hands-on experimentation means you don't know what you're buying or how to integrate it. The roadmap should start with learning, then decide build vs acquire."},
+      ]
+    },
+    {
+      scenario:`2020 — The Shop App Roadmap\n\nShopify is building the Shop app — a consumer-facing mobile app that helps buyers track orders, discover products, and earn rewards across all Shopify merchants. This is a radical strategic shift: Shopify has always been a merchant-facing platform. A consumer app means Shopify is now building for TWO audiences with potentially conflicting needs.\n\nMerchants worry: "Is Shopify becoming a marketplace like Amazon? Will the Shop app own my customer relationship?" Investors are excited: "A consumer app with 100M+ users could be the next Amazon competitor."\n\nThe roadmap must navigate this tension carefully.`,
+      question:`How do you roadmap the Shop app to balance merchant and consumer interests?`,
+      options:[
+        {text:"Build the Shop app as a full marketplace with product discovery, reviews, and one-click purchasing — compete directly with Amazon to give Shopify merchants access to a massive consumer audience",points:3,feedback:"Going full marketplace terrifies Shopify's core customer: the merchant. Shopify's entire value proposition is 'build YOUR brand on YOUR store' — the opposite of a marketplace where merchants are commoditised behind a platform brand. If Shop becomes Amazon-like, merchants lose brand identity, price competition intensifies, and Shopify controls the customer relationship. This approach would validate merchants' worst fears and could trigger an exodus to other platforms. Amazon's marketplace model works because Amazon STARTED as a retailer. Shopify started as a merchant platform — switching to marketplace mode risks losing the trust that built the business."},
+        {text:"Start with utility features that clearly serve merchants' existing customers (order tracking, delivery updates, easy reorders) — build consumer trust and habit, then gradually introduce merchant-approved discovery features based on merchant opt-in",points:10,feedback:"This 'utility first, discovery later' roadmap perfectly navigates the two-sided tension. Order tracking is pure value for everyone: consumers get convenience, merchants get fewer 'where's my order?' support tickets, and Shopify builds a consumer app with organic engagement. Once consumers habitually open Shop for tracking, introducing discovery features (browse other Shopify stores, personalised recommendations) becomes natural. The merchant opt-in model is crucial — merchants control whether they appear in discovery, preserving trust. Shopify's Shop app actually followed this exact sequence: tracking first, then Shop Pay integration, then gradual discovery features. The app reached 100M+ users primarily through the utility of order tracking."},
+        {text:"Build Shop as a loyalty/rewards app — consumers earn points shopping at any Shopify merchant, redeemable across the network. This creates consumer value without threatening merchant brand identity.",points:6,feedback:"Cross-merchant loyalty is an interesting idea but creates complex economics. Who funds the rewards? If Shopify subsidises points, the unit economics may never work at scale. If merchants fund them, you're asking merchants to subsidise each other's customer acquisition. Also, loyalty programmes have notoriously low engagement rates — most consumers ignore them. The utility approach (order tracking, delivery updates) solves a genuine daily pain point with much higher engagement potential. Loyalty could be a later roadmap item after the app has established daily usage through utility, but it's not the right starting point."},
+        {text:"Don't build a consumer app — Shopify should stay focused on merchants. A consumer app dilutes focus and creates conflicts of interest.",points:4,feedback:"Staying merchant-only is safe but ignores the strategic opportunity. Shopify has a unique asset: millions of merchants generating billions of transactions. A consumer layer that aggregates this activity (tracking, discovery, payments) creates a network effect that no single merchant can build alone. More importantly, if Shopify doesn't build the consumer relationship layer, Apple (via Apple Pay), Google (via Shopping), or Amazon (via marketplace) will. The Shop app is a defensive move as much as an offensive one — control the consumer experience or let a competitor control it. The key is building it in a way that serves merchants rather than competing with them."},
+      ]
+    },
+    {
+      scenario:`2021 — Hydrogen and Headless Commerce Roadmap\n\nThe frontend web development world is moving toward headless architectures — separating the storefront presentation layer from the commerce backend. React, Next.js, and other frameworks enable custom storefronts that are faster and more flexible than traditional themes.\n\nShopify's theme system (Liquid templates) is the core of 90% of Shopify stores. But large merchants and agencies increasingly want headless architectures for performance and design flexibility.\n\nShopify proposes Hydrogen — a React-based framework for building custom headless storefronts on Shopify. The roadmap tension: investing in Hydrogen might cannibalise the theme ecosystem that 90% of merchants depend on.`,
+      question:`How do you roadmap Hydrogen without undermining the theme ecosystem?`,
+      options:[
+        {text:"Go all-in on Hydrogen — headless is the future, and Shopify should lead the transition. Deprecate Liquid themes over 3 years and migrate merchants to React-based storefronts.",points:2,feedback:"Deprecating Liquid themes would alienate 90% of Shopify's merchant base. Most SMB merchants don't have React developers — they use themes precisely because they DON'T need to code. A 3-year deprecation means 1M+ merchants must either learn React, hire developers, or leave Shopify. The theme ecosystem also supports thousands of theme developers and agencies whose businesses depend on Liquid. Forcing a migration to headless destroys a thriving ecosystem for an unproven one. Headless is valuable for some merchants, but it's not the right architecture for a cupcake shop owner who needs a simple online store."},
+        {text:"Roadmap Hydrogen as a parallel path for advanced merchants and agencies, while simultaneously investing in making Liquid themes more powerful (better performance, more customisation, app integrations) — two tracks serving two audiences, with clear positioning for when each is appropriate",points:10,feedback:"Two parallel tracks is the right strategy because it matches Shopify's two audiences. SMB merchants need simplicity (themes). Enterprise and design-forward merchants need flexibility (headless). By investing in BOTH, Shopify avoids the false choice between simplicity and power. The key roadmap decision is positioning: clearly define when merchants should use themes vs Hydrogen. 'If you have a development team and need custom performance optimisation, use Hydrogen. If you want to launch in a day with no code, use themes.' Shopify actually invested in both — launching Hydrogen while simultaneously shipping Online Store 2.0, a major upgrade to the Liquid theme system. Both ecosystems are thriving."},
+        {text:"Wait and see — headless is still niche. Let the market mature before investing. Focus the roadmap entirely on improving Liquid themes.",points:4,feedback:"Waiting risks losing the high-value merchant segment. Enterprise merchants evaluating headless will choose Shopify competitors (commercetools, BigCommerce's headless offering) if Shopify doesn't have a credible headless solution. These merchants are the highest-GMV, highest-revenue segment. Also, developer mindshare matters — if the best frontend developers build on competitor platforms, the ecosystem advantage shifts. The right time to invest in headless is BEFORE it's mainstream, so Shopify shapes the standard rather than reacting to it. Shopify's Hydrogen bet positioned them as the headless commerce leader before most merchants even understood what headless meant."},
+        {text:"Build Hydrogen but keep it internal — use it for Shopify's own properties (Shop app, Shopify.com) to prove it works before offering it to merchants",points:5,feedback:"Dogfooding is good practice but delays the market opportunity. Shopify's own properties have different needs than merchant storefronts — Shopify.com is a marketing site, not a commerce store. The real test of Hydrogen is whether merchants and agencies can build performant stores with it. Keeping it internal also means no developer community feedback, no ecosystem of components and patterns, and no early adopter merchants generating case studies. The headless commerce market is moving fast — by the time internal testing is complete, competitors may have captured the developer ecosystem. Launch early with clear 'beta' positioning and iterate with community feedback."},
+      ]
+    },
+    {
+      scenario:`2018 — The App Store Ecosystem Roadmap\n\nShopify's App Store has 4,000+ apps built by third-party developers. It's a major competitive advantage — merchants can extend their store with email marketing, inventory management, SEO tools, and more. But the ecosystem has problems: app quality varies wildly, some apps slow down storefronts, and merchants complain about "app fatigue" from needing 10+ apps for basic functionality.\n\nThe product team proposes two competing roadmap directions:\n\nDirection A: Build more native features into core Shopify (email marketing, reviews, loyalty) — reducing dependence on third-party apps.\nDirection B: Invest in app platform improvements (better APIs, performance standards, app review process) — making the ecosystem higher quality.`,
+      question:`Which direction should the App Store ecosystem roadmap take?`,
+      options:[
+        {text:"Direction A — build native features. Merchants shouldn't need 10 apps for basic commerce. Shopify should own the core experience end-to-end.",points:4,feedback:"Building native features solves the merchant's symptom (too many apps) but kills the ecosystem that makes Shopify uniquely competitive. If Shopify builds native email marketing, every email marketing app developer (Klaviyo, Omnisend, Mailchimp) sees Shopify as a competitor rather than a partner. This 'Sherlocking' pattern (named after Apple killing apps by building native features) destroys developer trust and reduces the ecosystem investment that makes Shopify's platform defensible. Some features should be native (checkout, payments), but the ecosystem should handle the long tail of merchant needs."},
+        {text:"Both — but sequenced deliberately. First, raise the app platform quality bar (performance standards, better APIs, stricter review). Then, build native features ONLY where no quality third-party solution exists, while protecting established ecosystem partners with advance notice and integration opportunities.",points:10,feedback:"This sequenced approach protects the ecosystem while solving the merchant experience problem. Raising the quality bar first means the existing apps get better — addressing merchant complaints without killing ecosystem partners. Performance standards (apps can't add more than 200ms to page load) force low-quality apps to improve or leave. Better APIs let good apps build richer integrations. Stricter review raises the floor. THEN, native features fill genuine gaps where no quality app exists — with advance communication that lets ecosystem partners adapt. Shopify followed this approach: shipping Shopify Email for the gap in simple email marketing while preserving the ecosystem for advanced tools like Klaviyo."},
+        {text:"Direction B — invest purely in the ecosystem. Shopify's moat is the app ecosystem, and the best strategy is to make it the highest-quality commerce app platform in the world.",points:6,feedback:"Pure ecosystem investment is strategically sound but doesn't address the immediate merchant pain. Merchants don't care about API quality — they care that their store is slow because they have 12 apps installed, each adding JavaScript to the storefront. Platform improvements take time to translate to merchant experience improvements. You need some native features to solve immediate pain (basic email, basic reviews) while the ecosystem quality improvements work their way through. The answer isn't either/or — it's sequencing native features and platform investment in a way that serves merchants immediately while building long-term ecosystem health."},
+        {text:"Let the market decide — reduce Shopify's app review standards, allow maximum app variety, and let merchant ratings determine quality. The best apps will rise to the top.",points:3,feedback:"Reducing quality standards when merchants are already complaining about quality is the wrong direction. Merchant ratings are lagging indicators — by the time an app accumulates negative reviews, it's already slowed down thousands of stores. The App Store's reputation affects all apps, not just bad ones. If merchants learn that 'Shopify apps are unreliable,' they stop installing apps entirely — which hurts the good developers too. Platform curation (performance standards, code review, security audits) is essential for ecosystem health. Apple's App Store proved that higher standards increase overall ecosystem value, even if they reduce total app count."},
+      ]
+    },
+    {
+      scenario:`2020 — COVID and the Roadmap Pivot\n\nCOVID-19 hits. Overnight, physical retail collapses. Shopify sees a surge in new merchant signups — small businesses desperately moving online for the first time. The existing roadmap was focused on enterprise features (Shopify Plus improvements, advanced analytics, B2B channels).\n\nThe CEO declares: "This is our moment. Small businesses need us now more than ever." The question is whether to tear up the existing roadmap and pivot to SMB urgency, or stay the course on the planned enterprise investments.\n\nThe data: new merchant signups are up 60%. But enterprise merchant GMV is also surging (home delivery demand). Both segments are growing, but for different reasons.`,
+      question:`How do you handle the roadmap pivot during COVID?`,
+      options:[
+        {text:"Tear up the roadmap and pivot 100% to SMB onboarding — the surge in new small businesses is a once-in-a-generation opportunity to acquire merchants who will stay for years",points:5,feedback:"Pivoting 100% to SMB means abandoning enterprise commitments that Plus merchants are counting on. Enterprise merchants are ALSO seeing unprecedented demand (DTC brands, grocery delivery, home goods) and need the B2B channels and advanced features on the roadmap. A 100% pivot also assumes the SMB surge will sustain — if new merchants churn after COVID, you've sacrificed long-term enterprise revenue for short-term signups. The right approach is rebalancing, not abandoning. COVID changed the priorities within both segments, not just one."},
+        {text:"Maintain the existing roadmap — enterprise features generate more revenue per engineering hour, and the new SMB merchants will benefit from a better platform when the enterprise features ship",points:3,feedback:"Maintaining the pre-COVID roadmap ignores a fundamental shift in merchant needs. Enterprises need different features during COVID than before (curbside pickup, local delivery, capacity management). New SMB merchants need fast onboarding, not enterprise analytics. The pre-COVID roadmap was optimised for pre-COVID conditions. Rigid adherence to a plan when the world changes isn't discipline — it's denial. Great roadmapping means responding to validated signals, and a 60% spike in signups is the strongest signal possible."},
+        {text:"Rebalance the roadmap: accelerate features that serve BOTH segments during COVID (local delivery, curbside pickup, simplified onboarding), deprioritise pre-COVID features that are less urgent (advanced B2B analytics), and add COVID-specific items (gift cards for cash-strapped merchants, contactless checkout)",points:10,feedback:"Rebalancing is the right response to a macro shift. The key insight is finding items that serve both segments simultaneously: local delivery helps enterprise grocers AND new SMB restaurants. Curbside pickup helps enterprise retailers AND new SMB boutiques. Simplified onboarding helps new merchants AND reduces support costs. COVID-specific features (free gift cards, contactless checkout) are small investments with massive merchant goodwill. Shopify actually executed this brilliantly: they shipped local delivery and curbside pickup in weeks, extended free trials from 14 to 90 days, and made gift cards available on all plans (previously Plus-only). These moves served immediate needs while building long-term loyalty."},
+        {text:"Split the team: 50% continues enterprise roadmap, 50% pivots to COVID response features. Protect both investment streams.",points:6,feedback:"A 50/50 split is a reasonable instinct but arbitrary. The right split should be based on impact data, not equal allocation. Some enterprise features (B2B analytics) can wait 6 months with minimal business impact. Some COVID response features (local delivery) are urgent for both segments. The allocation should follow the urgency and cross-segment impact of each item, not a predetermined ratio. Also, a clean 50/50 split assumes teams are interchangeable — the engineer building B2B APIs may not be the right person to build local delivery. Rebalance based on item priority, not team percentage."},
+      ]
+    },
+    {
+      scenario:`2022 — The Shopify Audiences Roadmap\n\nShopify has an unprecedented data asset: transaction data from millions of merchants representing a significant share of US e-commerce. The data science team proposes Shopify Audiences — using aggregated, anonymised merchant data to help individual merchants find new customers through better ad targeting on Facebook and Google.\n\nThe concept: Shopify knows that buyers of organic dog food from Merchant A also tend to buy handmade dog collars. This insight can help Merchant B (selling dog collars) target the right audience on Facebook — without either merchant sharing their individual customer data.\n\nThe privacy and trust implications are enormous.`,
+      question:`How do you roadmap Shopify Audiences given the privacy considerations?`,
+      options:[
+        {text:"Launch broadly with all merchant data included by default — the aggregated, anonymised nature of the data means individual merchant privacy is protected",points:3,feedback:"Default inclusion violates the trust relationship. Merchants chose Shopify to own their customer data and brand relationship. Using their transaction data for another merchant's ad targeting — even anonymised — without explicit consent is a betrayal of that trust. 'It's anonymised' is a technical argument that ignores the emotional and business reality: merchants feel their competitive intelligence is being shared. One viral tweet from a merchant saying 'Shopify is selling my customer data to my competitors' could cause massive brand damage. Consent must be explicit, not default."},
+        {text:"Launch as an opt-in feature exclusively for Shopify Plus merchants, with clear data usage explanations, strict anonymisation, and the ability to exclude specific product categories or competitor segments — expand to all merchants only after proving trust and value",points:10,feedback:"Opt-in for Plus merchants first is the right roadmap because it tests the most sensitive aspects with the most sophisticated audience. Plus merchants understand data, have legal teams to review terms, and generate enough data to make the audiences useful. Clear explanations and category exclusions address the trust concern directly: merchants who opt in understand exactly what they're sharing and can protect competitive intelligence. Starting with Plus also means higher data quality (larger merchants with more transactions). Shopify Audiences actually launched as a Plus-only feature with strict opt-in, exactly because the trust implications required careful, controlled rollout."},
+        {text:"Build the technology but don't launch externally — use Shopify Audiences internally to improve Shop app recommendations and Shopify's own marketing, without exposing merchant data to other merchants or ad platforms",points:6,feedback:"Internal use avoids the merchant trust issue but misses the product opportunity. The real value of Shopify Audiences is helping merchants find customers more efficiently — which directly impacts their success and their loyalty to Shopify. Keeping it internal means Shopify benefits from the data without sharing the value with merchants. Also, using merchant data to improve Shopify's own marketing without merchant awareness creates the same trust issue — merchants may not want their aggregate data used to market Shopify to their competitors. If you're going to use the data, be transparent about it and share the value with merchants."},
+        {text:"Partner with a third-party data platform (like LiveRamp or The Trade Desk) instead of building Shopify Audiences — let a neutral party handle the data aggregation to avoid trust concerns",points:4,feedback:"Third-party partnerships don't solve the trust problem — they add a layer of complexity to it. Merchants now have to trust both Shopify AND the data partner. Third parties have their own incentive structures (selling data more broadly, building their own audiences). Shopify loses control over how merchant data is ultimately used. And the competitive advantage — Shopify's unique cross-merchant commerce data — gets shared with a platform that also serves non-Shopify merchants. The moat disappears. If Shopify is going to build an audiences product, it should own the entire pipeline to maintain data control and merchant trust."},
+      ]
+    },
+    {
+      scenario:`2016 — International Expansion Roadmap\n\nShopify is primarily a North American platform. 70% of merchants are in the US and Canada. The international opportunity is massive — global e-commerce is growing 25% annually, and many markets have no dominant commerce platform.\n\nBut international expansion requires localisation at every layer: languages, currencies, payment methods, tax calculations, shipping integrations, and legal compliance. Building for Japan is fundamentally different from building for Brazil.\n\nThe product team proposes an international roadmap. The debate: should Shopify build deep localisation for a few priority markets, or build a horizontal "internationalisation layer" that enables basic commerce in many markets?`,
+      question:`What international expansion roadmap strategy should Shopify follow?`,
+      options:[
+        {text:"Deep localisation for the top 5 international markets (UK, Germany, France, Japan, Australia) — build complete local payment, tax, shipping, and language support for each",points:5,feedback:"Deep localisation for 5 markets sounds thorough but takes years and serves only 5 countries while the rest of the world waits. Each market's deep localisation is a 6-12 month project with country-specific payment integrations, tax rules, and shipping partners. Meanwhile, merchants in Brazil, India, and Southeast Asia — some of the fastest-growing e-commerce markets — have no Shopify solution. Also, 'deep' localisation for Japan looks nothing like 'deep' localisation for Germany, so there's limited reuse between markets. The serial approach is too slow for a global opportunity."},
+        {text:"Build a horizontal internationalisation layer first (multi-currency, multi-language, tax framework, shipping API) that enables basic commerce in 50+ markets, then deepen localisation for priority markets based on merchant adoption data",points:10,feedback:"Horizontal first, vertical second is the right sequencing. A multi-currency engine enables commerce in any country without country-specific development. A pluggable tax framework lets local tax rules be added incrementally. A shipping API abstraction lets local carriers integrate without core platform changes. Once this foundation exists, Shopify can deepen ANY market quickly by adding local payment methods, local shipping partners, and local language support. Merchant adoption data tells you which markets to deepen first — maybe Brazil grows faster than Japan, changing the priority. Shopify followed this approach: building Shopify Markets as a horizontal layer, then deepening specific markets based on merchant demand."},
+        {text:"Expand through partnerships — find established e-commerce platforms in each region and integrate with them rather than building localisation from scratch",points:3,feedback:"Partnerships cede control of the merchant experience in each market. If a partner owns the payment layer in Japan, Shopify can't improve it, can't ensure quality, and can't capture the payment processing revenue. Partnerships also fragment the platform — a merchant selling in the US (on Shopify) and Japan (on a partner) has two different admin experiences, two different analytics dashboards, and two different feature sets. Shopify's value is ONE platform for global commerce. Partnerships create exactly the fragmentation Shopify's competitors suffer from."},
+        {text:"Focus on English-speaking markets only — US, UK, Canada, Australia, and India (English segment). Language is the hardest localisation challenge; by staying English-first, Shopify can expand faster.",points:4,feedback:"English-only ignores the largest e-commerce growth markets. China, Japan, Korea, Germany, France, Brazil, and Southeast Asia are all growing faster than English-speaking markets. Language is ONE localisation challenge, but payment methods (iDEAL in Netherlands, PIX in Brazil, Alipay in China) and tax systems are equally complex — and those vary even within English-speaking markets. Also, India's e-commerce market is primarily Hindi and regional languages, not English. Restricting to English means restricting to a shrinking share of global e-commerce. Build the framework that enables any language, then add languages based on demand."},
+      ]
+    },
+    {
+      scenario:`2023 — The Shopify Magic AI Roadmap\n\nGenerative AI (ChatGPT, GPT-4) explodes in popularity. Every tech company is racing to add AI features. The product team proposes "Shopify Magic" — AI-powered features for merchants including product description generation, email campaign writing, customer support chatbots, and demand forecasting.\n\nThe roadmap question: which AI features to build first, and how to sequence them. Some features are easy to build (text generation via API) but low-impact. Others are high-impact (demand forecasting) but require massive data infrastructure investment.\n\nMerchants are already using ChatGPT directly. The window to embed AI natively into Shopify is closing.`,
+      question:`How do you prioritise the Shopify Magic AI roadmap?`,
+      options:[
+        {text:"Ship everything quickly — product descriptions, email campaigns, chatbots, and demand forecasting all in one launch. Speed matters more than depth when AI is this competitive.",points:3,feedback:"Shipping everything at once means everything is shallow. AI-generated product descriptions using a generic GPT prompt are marginally better than what merchants already get from ChatGPT. Without Shopify-specific training data (product categories, merchant tone of voice, conversion optimisation), the output is generic. Demand forecasting requires months of data infrastructure work that can't be rushed. A rushed launch of mediocre AI features reinforces the narrative that 'AI features are gimmicky' rather than establishing Shopify as the AI commerce platform. Depth beats breadth for AI feature credibility."},
+        {text:"Start with product description generation (quick win with immediate merchant value, built on existing product data), then email campaign writing (leverages merchant + customer data), then customer support (requires conversation training), then demand forecasting (requires deep data investment) — sequence by data readiness and merchant impact",points:10,feedback:"This sequencing follows two principles: ship features where Shopify's data advantage creates unique value, and sequence by data infrastructure readiness. Product descriptions are perfect first: Shopify has rich product metadata (categories, attributes, images) that makes AI-generated descriptions better than generic ChatGPT output. Email campaigns are next because they leverage both product data AND customer behaviour data. Customer support requires training on merchant-specific conversations. Demand forecasting requires the most data infrastructure. Each feature builds on the data pipeline of the previous one. Shopify Magic actually launched with product descriptions first, exactly because it was the highest-value, lowest-infrastructure starting point."},
+        {text:"Focus on demand forecasting first — it's the highest-value feature that ChatGPT can't replicate. Text generation is easily commoditised; predictive analytics is a genuine competitive moat.",points:5,feedback:"Demand forecasting would indeed be a powerful moat, but it requires 12-18 months of data infrastructure investment before any merchant sees value. During that time, competitors ship text generation features, merchants adopt third-party AI tools, and the narrative becomes 'Shopify is behind on AI.' Also, demand forecasting requires large merchants with historical data — it doesn't help the new SMB merchant who just needs a product description. The roadmap should deliver value NOW (text generation) while building toward the moat (forecasting). Sequential value delivery keeps merchants engaged while you build the harder features."},
+        {text:"Don't build AI features — integrate with OpenAI/Google AI APIs and let merchants use their preferred AI tools through Shopify's app ecosystem",points:4,feedback:"Integration-only concedes the AI advantage to platform providers. If merchants use OpenAI directly, the AI doesn't benefit from Shopify's commerce data — product descriptions are generic, not optimised for conversion. Shopify's unique value is commerce context: it knows what product descriptions drive sales, which email subject lines generate clicks, and what inventory patterns predict demand. This data makes Shopify's AI features fundamentally better than generic tools. Relying on third-party AI also means Shopify's differentiation can be replicated by any commerce platform using the same APIs."},
+      ]
+    },
+    {
+      scenario:`2019 — The Point-of-Sale Hardware Roadmap\n\nShopify POS lets merchants sell in physical stores using Shopify as their commerce backend. The current hardware (a third-party card reader) is unreliable and the in-store experience is clunky compared to Square's polished hardware-software integration.\n\nThe hardware team proposes building Shopify's own POS hardware — a purpose-built terminal with card reader, receipt printer, and cash drawer integration. This means Shopify enters hardware manufacturing, a fundamentally different business from software.\n\nThe investment is significant: $50M+ in hardware design, manufacturing partnerships, supply chain, and inventory management. Hardware mistakes are expensive and irreversible — you can't patch a physical device like you can update code.`,
+      question:`How do you roadmap Shopify's entry into POS hardware?`,
+      options:[
+        {text:"Design and manufacture a full POS system from scratch — receipt printer, card reader, cash drawer, customer display — all branded Shopify hardware",points:3,feedback:"Full hardware stack on the first attempt is enormously risky. Shopify has zero hardware manufacturing experience. Receipt printers, card readers, and cash drawers each have established manufacturers with decades of supply chain expertise. Building everything from scratch means solving industrial design, supply chain management, quality control, warranty support, and inventory forecasting simultaneously. Apple can do this because they have 40+ years of hardware experience. Shopify should start with the component that delivers the most software-hardware integration value (the card reader/terminal) and partner for peripherals."},
+        {text:"Start with a single, focused device — a Shopify-branded card reader and terminal — and partner with existing hardware manufacturers for peripherals (receipt printer, cash drawer). Validate merchant adoption and hardware quality, then expand the hardware line based on merchant feedback.",points:10,feedback:"Focused hardware + partner peripherals is exactly the right first step. The card reader/terminal is where software-hardware integration matters most — it's the primary interaction point for staff and customers. By building this one device well, Shopify proves it can do hardware while limiting the blast radius of manufacturing mistakes. Partnering for peripherals (receipt printers, cash drawers) leverages existing supply chains without reinventing them. Merchant feedback from v1 informs whether Shopify should expand into more hardware or continue partnering. Shopify actually launched POS hardware this way — starting with a focused tap-and-chip reader before expanding to a full POS terminal."},
+        {text:"Skip hardware entirely — build the best possible POS software that works with any merchant's existing hardware. Let Square compete on hardware while Shopify wins on software.",points:5,feedback:"Software-only POS avoids the hardware risk but creates integration headaches. When Shopify POS depends on third-party hardware, every card reader update, firmware change, or compatibility issue is outside Shopify's control. Merchants blame Shopify when the third-party reader fails, even though Shopify can't fix it. Square's success proves that hardware-software integration creates a significantly better merchant experience. The question isn't whether to do hardware — it's how to enter hardware incrementally without the full risk of manufacturing everything from scratch."},
+        {text:"Acquire a POS hardware company (like Poynt or Clover's hardware division) — buy the hardware expertise and manufacturing relationships rather than building from scratch",points:6,feedback:"Acquisition is a valid accelerator, but POS hardware companies come with their own software stacks, merchant relationships, and technical debt. Integrating acquired hardware with Shopify's software platform is a multi-year project. Clover's hardware is tied to Fiserv's payment processing — buying it means untangling financial services dependencies. The better approach is to partner with an ODM (original design manufacturer) to build Shopify-branded hardware to Shopify's specifications, keeping full control of the design and software integration while leveraging manufacturing expertise. This is how most tech companies enter hardware."},
+      ]
+    },
+  ],
+  2: [
+    {
+      scenario:`2021 — The Checkout Extensibility Roadmap\n\nShopify's checkout is the most critical page in commerce — it processes billions of dollars in GMV. Currently, only Shopify Plus merchants can customise the checkout using checkout.liquid (a Liquid template). But this customisation is fragile: every Shopify checkout update risks breaking custom code, and security/compliance (PCI) concerns limit what merchants can modify.\n\nThe engineering team proposes "Checkout Extensibility" — a new architecture where merchants customise checkout through sandboxed extensions (like apps) rather than template modifications. This means deprecating checkout.liquid for something fundamentally better — but also fundamentally different.\n\nThousands of Plus merchants have invested in checkout.liquid customisations. Migrating them is a massive undertaking.`,
+      question:`How do you roadmap the checkout.liquid deprecation and migration to Checkout Extensibility?`,
+      options:[
+        {text:"Set a hard deprecation date 12 months out — give merchants a clear deadline and let the urgency drive migration. Rip the band-aid off.",points:3,feedback:"Hard deprecation deadlines for revenue-critical infrastructure create panic, not migration. Checkout customisations are tied to revenue — a merchant whose checkout breaks loses sales immediately. A 12-month deadline for thousands of merchants with varying technical resources means many will scramble, break things, or leave Shopify entirely. The merchants most dependent on checkout customisations are the highest-value Plus merchants — exactly the segment you can't afford to lose. Deprecation should be gradual, well-supported, and long enough for even the most complex customisations to migrate safely."},
+        {text:"Build Checkout Extensibility to feature parity with checkout.liquid first, then offer an 18-month migration period with migration tools, documentation, dedicated support, and financial incentives — deprecate checkout.liquid only after 90%+ of merchants have migrated voluntarily",points:10,feedback:"Feature parity before deprecation is the critical sequencing decision. Merchants won't migrate to a system that can't do what their current customisations do — every missing feature is a reason to stay on checkout.liquid. The 18-month timeline with migration tools respects the complexity of checkout customisations (some merchants have years of custom code). Dedicated support for the highest-GMV merchants protects revenue. Financial incentives (migration credits, extended support) reduce friction. The 90%+ threshold before deprecation ensures you're not forcing the last 10% to migrate before the tools are ready. Shopify actually provided an extended migration timeline of 18+ months with extensive tooling."},
+        {text:"Run both systems indefinitely — let merchants choose between checkout.liquid and Checkout Extensibility. Don't force migration at all.",points:4,feedback:"Running both systems indefinitely means maintaining two checkout architectures — one legacy (Liquid-based, fragile, security-constrained) and one modern (sandboxed, extensible, secure). Every checkout improvement must be built twice or only applied to one system, creating feature disparity. Security patches must cover both codebases. PCI compliance audits double in complexity. The engineering cost of dual maintenance compounds annually. Eventually, the legacy system becomes a liability that limits what Shopify can build. Deprecation is necessary — the question is when and how, not whether."},
+        {text:"Migrate checkout.liquid to Checkout Extensibility automatically using code transformation tools — convert Liquid templates to sandboxed extensions programmatically",points:5,feedback:"Automatic code transformation sounds appealing but checkout customisations aren't just templates — they're business logic. A merchant's checkout might include conditional discount rules, custom shipping calculations, loyalty programme integrations, and fraud detection scripts. Automatically converting this logic from Liquid to sandboxed extensions would produce technically correct but functionally unpredictable results. A checkout that works 99% of the time but fails on the 1% edge case (high-value orders, international shipping, specific payment methods) causes disproportionate revenue damage. Automated tools can handle simple migrations, but complex customisations need manual attention."},
+      ]
+    },
+    {
+      scenario:`2022 — The B2B Commerce Roadmap\n\nShopify Plus merchants are increasingly asking for B2B (business-to-business) features: wholesale pricing, company accounts, purchase orders, net payment terms, and volume discounts. Currently, merchants use workarounds — hidden collections, discount codes, or third-party apps — to serve wholesale customers.\n\nThe B2B opportunity is massive ($7.7 trillion market), but Shopify has always been a DTC (direct-to-consumer) platform. Building B2B features means rethinking core assumptions: instead of individual buyers, you have company accounts. Instead of credit cards, you have purchase orders and net-30 terms.\n\nThe roadmap must introduce B2B without complicating the DTC experience for the 95% of merchants who don't need B2B.`,
+      question:`How do you roadmap B2B commerce on Shopify?`,
+      options:[
+        {text:"Build B2B as a separate Shopify product — 'Shopify B2B' with its own admin, its own checkout, and its own pricing. Keep it completely separate from the DTC platform.",points:3,feedback:"Separate products create the exact fragmentation Shopify's competitors suffer from. A merchant selling both DTC and wholesale (extremely common) would manage inventory in two systems, customers in two databases, and orders in two dashboards. The operational overhead would be enormous. Shopify's competitive advantage is ONE platform for all commerce. Magento offers separate B2B and B2C — and merchants hate managing both. The right approach is unified commerce: one product catalog, one inventory system, one admin, with B2B features available as a layer on top of the DTC foundation."},
+        {text:"Build B2B as a native layer within the existing Shopify platform — same product catalogue, same admin, same inventory, but with B2B-specific features (company accounts, wholesale pricing, purchase orders) that activate when a merchant enables B2B. DTC merchants never see B2B complexity.",points:10,feedback:"Unified platform with optional B2B layer is the architecture that serves both audiences. A merchant's product catalogue is the same whether they're selling to consumers or wholesalers — they just need different pricing for each channel. Company accounts extend the existing customer model. Purchase orders extend the existing order model. By building B2B as a layer rather than a separate product, merchants get unified inventory, unified analytics, and a single admin. The 'DTC merchants never see B2B complexity' principle is crucial — progressive disclosure means features appear only when enabled. Shopify built B2B exactly this way, launching it as a native feature within the Shopify admin."},
+        {text:"Don't build B2B — the B2B market has established players (SAP, Oracle, Salesforce). Shopify should stay focused on DTC where it dominates.",points:4,feedback:"Ceding B2B means losing merchants who sell both DTC and wholesale — and that's a growing segment. The trend in commerce is blurred lines between B2B and DTC: DTC brands adding wholesale channels, B2B companies adding consumer storefronts. If Shopify can't serve both, merchants outgrow the platform and migrate to competitors that can. The established B2B players (SAP, Oracle) are expensive, complex, and enterprise-only. Shopify's opportunity is to bring its simplicity advantage to B2B, just like it did for DTC. Small B2B businesses are as underserved as small DTC businesses were when Shopify started."},
+        {text:"Build B2B as an app — let the ecosystem build B2B functionality through Shopify's app platform, similar to how email marketing and loyalty are handled by apps",points:5,feedback:"Apps work for features where merchants have diverse needs (email marketing styles, loyalty programme structures). But B2B commerce requires deep platform integration: pricing must be product-level, company accounts must connect to checkout, purchase orders must flow through Shopify's order management. An app can't modify how Shopify calculates prices or how checkout handles payment terms at the depth B2B requires. Third-party B2B apps on Shopify (like Bold Custom Pricing) exist today and merchants find them insufficient — they're bolt-ons that don't feel native. B2B needs to be a platform capability, not an app."},
+      ]
+    },
+    {
+      scenario:`2023 — Sidekick AI Assistant Roadmap\n\nShopify is building "Sidekick" — an AI assistant that helps merchants run their stores through natural language. Merchants can ask Sidekick questions like "What were my best-selling products last month?" or "Create a 20% discount for repeat customers" and Sidekick executes the action.\n\nThe power of Sidekick is that it has access to the merchant's entire store context: products, orders, customers, analytics, and settings. But this raises a critical roadmap question: which actions should Sidekick be allowed to perform autonomously, and which should require merchant confirmation?\n\nAn AI that can "Create a 20% discount" can also accidentally "Delete all products" if it misunderstands a request.`,
+      question:`How do you roadmap Sidekick's action permissions?`,
+      options:[
+        {text:"Start read-only — Sidekick can answer questions and provide insights but cannot modify anything in the store. Add write capabilities one category at a time after validating accuracy.",points:7,feedback:"Read-only start is safe but severely limits Sidekick's value. The most requested merchant actions are operational: create discounts, update inventory, adjust shipping rates. If Sidekick can only answer questions, merchants will use it once, find it limited, and go back to the admin interface. The AI assistant's value comes from saving time on ACTIONS, not just providing information. However, the principle of starting restricted and expanding is correct — the execution should be more nuanced than binary read/write. A tiered permission system lets Sidekick take low-risk actions immediately while requiring confirmation for high-impact ones."},
+        {text:"Implement a tiered action system: Tier 1 (no confirmation) for low-risk, reversible actions like viewing reports and creating discount codes. Tier 2 (confirmation required) for medium-risk actions like updating product prices and changing shipping rates. Tier 3 (blocked) for irreversible actions like deleting products or closing the store. Expand tiers based on merchant trust and AI accuracy data.",points:10,feedback:"Tiered permissions match the risk of each action to the appropriate level of human oversight. Low-risk, reversible actions (create a discount code, view a report) can be executed immediately — the worst case is a discount code you delete. Medium-risk actions (change product prices) need a confirmation step because errors affect revenue but are reversible. High-risk, irreversible actions (delete products, disable the store) should never be automated. The tier expansion based on trust data is key: as Sidekick demonstrates accuracy on Tier 1 actions, merchants gain confidence, and more actions can be promoted to lower tiers. This mirrors how organisations gradually grant permissions to new employees."},
+        {text:"Give Sidekick full write access from the start — merchant businesses move fast and they need an AI that can keep up. Add an 'undo' button for everything instead of permission gates.",points:3,feedback:"Full write access with undo sounds agile but ignores two realities. First, not everything is undoable — if Sidekick changes prices on 500 products and some sell at the wrong price before the merchant notices, the revenue impact is real and irreversible. Second, 'undo' requires the merchant to notice the error, which may not happen until damage is done (a wrong discount code spreading on social media, inventory counts going negative). The cost of an AI error in commerce is financial, not just inconvenient. Permission gates are not friction — they're risk management for a system that handles money."},
+        {text:"Let each merchant configure their own Sidekick permissions — some merchants want full autonomy, others want confirmation on everything. Personal choice respects merchant diversity.",points:5,feedback:"Merchant-configured permissions sound empowering but create a dangerous default. Most merchants won't configure permissions carefully — they'll either leave defaults (which you have to choose anyway) or enable everything for convenience (until the first mistake). The merchants most likely to enable full access are often the least technically sophisticated — exactly the users who need guardrails most. Sensible defaults (the tiered system) should be the baseline, with merchant ability to adjust within safe bounds. This is the principle of 'safe by default, customisable within limits' that Apple, Google, and every successful platform follows."},
+      ]
+    },
+    {
+      scenario:`2017 — The Shopify Capital Roadmap\n\nShopify has unique data: it sees every merchant's daily sales, growth trajectory, seasonal patterns, and customer base in real-time. The finance team proposes Shopify Capital — offering merchants cash advances and loans based on their Shopify sales data rather than traditional credit scores.\n\nThe roadmap question: Shopify Capital blurs the line between commerce platform and financial services. Each country has different lending regulations. The risk model must balance merchant growth support with financial prudence.\n\nSome merchants will default. The question is how to roadmap this new business line within a commerce platform.`,
+      question:`How do you roadmap Shopify Capital's expansion?`,
+      options:[
+        {text:"Launch in all markets where Shopify operates — the data advantage exists everywhere, and merchants everywhere need capital",points:2,feedback:"Global lending launch is a regulatory nightmare. Each country has different lending laws, interest rate caps, consumer protection requirements, and licencing needs. In the US alone, lending regulations vary by state. Launching globally means dozens of simultaneous regulatory compliance efforts, each requiring local legal expertise. A regulatory violation in one market could compromise the entire programme. Financial services roadmaps must be sequenced by regulatory readiness, not merchant demand. Start where regulations are clearest and your compliance infrastructure is strongest."},
+        {text:"Start in the US with cash advances (not loans — different regulatory treatment), validate the risk model against actual default rates, then expand to new financial products (loans, lines of credit) and new geographies as the risk model proves accurate and regulatory readiness is confirmed",points:10,feedback:"Starting with cash advances is a brilliant regulatory insight. Cash advances (merchant cash advances, or MCAs) have lighter regulatory requirements than loans in many jurisdictions because they're structured as purchases of future receivables, not debt. This lets Shopify enter financial services without a full lending licence. Validating the risk model against actual defaults before expanding prevents scaling a broken model. The expansion sequence — new products THEN new geographies, or new geographies THEN new products — should be driven by data: if the risk model works in the US, geographic expansion is safer than adding complex new financial products. Shopify Capital actually started with MCAs in the US and expanded gradually."},
+        {text:"Partner with established banks and lenders — let them bear the financial risk while Shopify provides the merchant data. Shopify earns a referral fee without the regulatory burden.",points:6,feedback:"Partnerships reduce risk but also reduce upside and control. If a bank partner handles lending, Shopify can't control the merchant experience: approval speed, communication, repayment terms, or customer support. A bad experience with a lending partner reflects on Shopify's brand. Referral fees are also much smaller than the interest/fee income from direct lending. Shopify's data advantage (seeing real-time merchant sales) is the moat — sharing this with a bank partner means the bank could eventually build its own merchant lending product without Shopify. The strategic play is to own the financial relationship, building the risk management and regulatory expertise in-house over time."},
+        {text:"Build Shopify Capital as a standalone fintech company separate from Shopify — different team, different brand, different risk profile. Don't contaminate the commerce platform with financial services risk.",points:4,feedback:"Separation protects the core brand but destroys the competitive advantage. Shopify Capital's entire value proposition is integration with the commerce platform — instant approval based on real-time sales data, automatic repayment from daily revenue, and capital offers surfaced at the right moment in the merchant journey. A separate company with separate data access loses this integration. It also creates a two-brand confusion for merchants. The risk of financial services should be managed through proper risk modelling and reserves, not organisational separation. Amazon Lending, Square Capital, and Stripe Capital all operate within their parent platforms for exactly this reason."},
+      ]
+    },
+    {
+      scenario:`2020 — The Online Store 2.0 Redesign Roadmap\n\nShopify's theme system hasn't been fundamentally updated in years. Theme developers complain that the templating system (Liquid + JSON) is outdated compared to modern frontend frameworks. Merchants want more customisation without hiring developers. The page editor is basic compared to Squarespace and Wix's drag-and-drop builders.\n\nThe engineering team proposes "Online Store 2.0" — a complete redesign of the theme architecture with sections everywhere (not just the homepage), a new JSON template system, and metafields for custom data. This is a platform-level change that affects every existing theme.\n\nThe ecosystem impact is massive: 1,000+ themes in the Theme Store, 10,000+ developers, and millions of merchants with customised stores.`,
+      question:`How do you roadmap the Online Store 2.0 migration?`,
+      options:[
+        {text:"Ship Online Store 2.0 as the new default for all new stores, while existing stores continue on the current system indefinitely. Don't force migration — let merchants upgrade voluntarily.",points:6,feedback:"Voluntary migration avoids ecosystem disruption but creates permanent fragmentation. Theme developers must support both architectures indefinitely. New features built for OS 2.0 won't be available to merchants on the old system. Over time, a growing feature gap between old and new stores creates a two-tier merchant experience. The support burden of maintaining both systems compounds annually. Voluntary migration is the right default for the first phase, but you need a clear plan to eventually sunset the old system — otherwise you're committing to maintaining two theme architectures forever."},
+        {text:"Ship OS 2.0 for new stores, provide migration tools and documentation for existing stores, offer a 2-year transition period with incentives (free theme upgrades, migration support), and sunset the old system after the majority of the ecosystem has migrated — with clear milestones and communication at each stage",points:10,feedback:"Phased migration with ecosystem support is the right approach for platform-level changes. New stores get OS 2.0 immediately (no legacy debt). Existing stores get migration tools that reduce the work required. The 2-year transition period respects the ecosystem's investment in current themes while setting a clear direction. Incentives (free theme upgrades, developer migration grants) turn the migration from a burden into an opportunity. Clear milestones ('Q1: migration tools available. Q2: 50% of top themes migrated. Q3: sunset announcement for old system') give the ecosystem predictability. Shopify executed a version of this: shipping OS 2.0, providing migration tools, and gradually transitioning the ecosystem."},
+        {text:"Delay OS 2.0 until it's fully backwards-compatible with all existing themes — no theme should break when the new system ships",points:4,feedback:"Full backwards compatibility with a fundamentally new architecture is technically contradictory. OS 2.0's 'sections everywhere' model requires a different template structure than the current system — they're architecturally incompatible by design. Attempting backwards compatibility means either compromising the new system's capabilities or creating a complex compatibility layer that introduces its own bugs. The automotive industry doesn't make new engines backwards-compatible with old cars — they provide upgrade paths. Similarly, OS 2.0 should provide excellent migration tools and transition time, not architectural compromises that limit its potential."},
+        {text:"Force-migrate all stores to OS 2.0 with an automated conversion tool — rip the band-aid off to avoid maintaining two systems",points:3,feedback:"Forced migration of millions of customised stores is catastrophic. Automated conversion can handle standard theme structures but will break custom code, third-party app integrations, and design customisations that merchants have spent years perfecting. A store that looks and functions differently after forced migration will generate massive support volume, merchant anger, and potential revenue loss. The 'rip the band-aid' metaphor trivialises the impact: this isn't a minor UI change — it's a fundamental architecture change that affects how every page renders. Forced migration of commerce sites where errors mean lost revenue is irresponsible product management."},
+      ]
+    },
+    {
+      scenario:`2018 — The Shopify Shipping Roadmap\n\nMerchants consistently rank shipping as their #1 operational pain point. They must negotiate carrier rates individually, compare shipping options manually, and handle returns with no platform support. Shopify's competitors (WooCommerce + ShipStation, BigCommerce + ShipperHQ) offer shipping through integrations, but the experience is fragmented.\n\nThe shipping team proposes native Shopify Shipping — negotiated carrier rates (USPS, UPS, DHL) available to all merchants through Shopify, with label printing, tracking, and returns management built into the admin.\n\nBut the roadmap faces a build-vs-integrate dilemma: Shopify can build shipping features natively or acquire/partner with an existing shipping platform.`,
+      question:`How do you roadmap Shopify Shipping?`,
+      options:[
+        {text:"Build everything natively — carrier rate negotiation, label printing, tracking, returns, insurance. Own the entire shipping stack.",points:4,feedback:"Building the entire shipping stack from scratch means years before merchants see meaningful improvement. Carrier rate negotiation requires volume-based contracts that take time to build. Label printing requires carrier API integrations for each carrier in each country. Returns management is a separate workflow with its own complexity. Building all of this natively while maintaining the core commerce platform stretches engineering resources thin. The better approach is to layer: start with the highest-value, quickest-to-ship features and build depth over time."},
+        {text:"Acquire a shipping platform (like Shippo or EasyPost) for the API and carrier integrations, then build the merchant-facing experience natively in Shopify's admin — combining acquired infrastructure with Shopify's UX strengths",points:7,feedback:"Acquisition accelerates the infrastructure layer while Shopify owns the experience layer. This is a sound strategy — shipping APIs and carrier integrations are commodity technology that doesn't need to be built from scratch. Shippo/EasyPost have years of carrier partnerships and API reliability. Shopify's strength is merchant UX, not carrier API management. However, acquisition brings integration complexity: merging codebases, aligning cultures, and maintaining the acquired platform's existing customers. The alternative — partnering rather than acquiring — achieves similar results with less integration risk."},
+        {text:"Partner with carriers directly for negotiated rates, build label printing and tracking natively, and integrate with third-party apps for advanced features (returns, insurance, international) — layer the roadmap by building core features in-house while leveraging ecosystem for the long tail",points:10,feedback:"Layered build + ecosystem is the right roadmap because it delivers merchant value quickly while preserving flexibility. Negotiated carrier rates are high-value and exclusive — no app can offer them. Label printing and tracking are core workflows that belong in the admin. Returns and insurance are complex, varied, and well-served by the app ecosystem. This sequencing means merchants get the highest-impact features (cheaper rates, easier labels) quickly, while the app ecosystem handles the long tail of shipping needs (international compliance, freight, returns automation). Shopify Shipping launched this way: negotiated USPS rates, native label printing, and an ecosystem of apps for advanced shipping needs."},
+        {text:"Don't build shipping — it's an operational domain, not a software domain. Partner with ShipStation or ShipBob and focus Shopify's engineering on commerce features.",points:4,feedback:"Shipping is inseparable from commerce. A merchant's shipping costs, speed, and reliability directly affect conversion rates, customer satisfaction, and profitability. Treating shipping as 'not our domain' means the most painful part of running a Shopify store is handled by a third party that Shopify can't improve. Square built native invoicing. Stripe built native billing. Shopify needs native shipping because it's a core merchant workflow, not a peripheral feature. Partnership means Shopify can't negotiate carrier rates on merchants' behalf, can't embed shipping into checkout, and can't use shipping data to improve the commerce platform."},
+      ]
+    },
+    {
+      scenario:`2023 — The Shopify Editions Roadmap Communication\n\nShopify launches "Shopify Editions" — a twice-yearly product announcement event (similar to Apple's WWDC) where the company reveals its roadmap publicly. The first Editions event announces 100+ features and updates.\n\nSome product leaders argue against public roadmap communication: "If we announce features early and they slip, merchants lose trust. If competitors see our roadmap, they can copy our strategy. Internal teams feel pressured by public deadlines."\n\nOthers argue that public roadmap communication builds merchant confidence, attracts developers to the ecosystem, and creates market narrative.`,
+      question:`Should Shopify communicate its product roadmap publicly through Editions events?`,
+      options:[
+        {text:"Don't share the roadmap publicly — follow Apple's secrecy model. Announce features when they're ready to ship, not before.",points:4,feedback:"Apple's secrecy works because Apple sells to consumers who buy on impulse and don't plan around product roadmaps. Shopify sells to merchants who make business decisions based on platform capabilities. A merchant deciding between Shopify and BigCommerce needs to know where each platform is heading. A developer deciding whether to build a Shopify app needs confidence that the platform is investing in areas relevant to their app. Secrecy forces merchants and developers to make decisions with incomplete information, which increases churn risk. B2B platforms need more transparency than consumer products."},
+        {text:"Share a curated public roadmap through Editions: announce features that are shipping within 3-6 months (high confidence), share directional themes for 6-12 months (medium confidence), and keep longer-term bets private. Use tiers of confidence to manage expectations while building ecosystem trust.",points:10,feedback:"Tiered confidence roadmap communication is the right balance. Shipping-soon features can be announced with dates because they're largely built. Directional themes ('We're investing heavily in B2B commerce') give the ecosystem strategic signal without specific commitments. Long-term bets stay private to preserve flexibility. This approach builds merchant trust (they can see Shopify's investment direction), attracts developers (they can plan apps around upcoming platform features), and creates marketing moments that drive press coverage and merchant acquisition. The key discipline is only announcing what you're confident in delivering — a broken promise at Editions is worse than silence."},
+        {text:"Share the complete internal roadmap publicly — radical transparency builds maximum trust. If features slip, be honest about why.",points:4,feedback:"Complete transparency sounds principled but creates practical problems. Internal roadmaps contain exploratory projects that may never ship, competitive strategies that benefit from secrecy, and resource allocation decisions that would concern investors. If a merchant sees 'Explore: Shopify entering grocery commerce' on the roadmap and plans their business around it, they're harmed when the project is cancelled. Complete transparency also locks teams into announced features — even when data suggests pivoting. The internal roadmap is a planning tool; the public roadmap is a communication tool. They serve different purposes and should contain different levels of detail."},
+        {text:"Only share the roadmap with enterprise (Plus) merchants under NDA — they need roadmap visibility for business planning, but public sharing creates too much competitive risk",points:5,feedback:"Plus-only roadmap creates a two-tier merchant experience that contradicts Shopify's mission of democratising commerce. SMB merchants also make business decisions based on platform direction — a merchant choosing between Shopify and Wix deserves the same visibility as a Plus merchant. NDA-restricted roadmaps also leak constantly (merchants tell partners, agencies share with clients), creating an information asymmetry that benefits connected merchants over others. The better approach is public communication with tiered confidence: everyone gets the same information, with clear signals about what's confirmed vs directional."},
+      ]
+    },
+    {
+      scenario:`2019 — The Shopify App Platform Versioning Roadmap\n\nShopify's API has accumulated years of backwards-compatible additions, resulting in a bloated, inconsistent API surface. The engineering team proposes a new API versioning strategy: quarterly API versions (2019-01, 2019-04, 2019-07, 2019-10) with a 12-month deprecation window for each version.\n\nThis means developers must update their apps every 12 months to stay compatible. Currently, some apps haven't been updated in 3+ years and still work — they'll break under the new versioning system.\n\nThe App Store has 4,000+ apps. The developer ecosystem is Shopify's competitive moat. Breaking apps means breaking trust.`,
+      question:`How do you roadmap the API versioning transition?`,
+      options:[
+        {text:"Implement quarterly versioning immediately — apps that haven't been updated in 3 years are likely abandoned. The ecosystem is better off without dead apps.",points:3,feedback:"'Likely abandoned' apps may have thousands of active merchant installations. A merchant using a niche inventory app that was last updated 2 years ago doesn't care that it's 'abandoned' — it works for their business. Breaking it disrupts their operations. Also, many small developer teams maintain apps as side businesses — they update when needed, not proactively. Suddenly requiring quarterly updates forces them to choose between continuous maintenance investment or abandoning their apps and merchants. The versioning strategy is right; the immediate implementation without transition support is wrong."},
+        {text:"Announce the versioning strategy with a 6-month grace period before the first deprecation. During the grace period: provide migration guides, run developer workshops, build automated compatibility checkers, and reach out personally to developers of the 100 most-installed apps. After grace period, enforce quarterly versioning with 12-month deprecation windows.",points:10,feedback:"Grace period + ecosystem support is the right implementation. The 6-month pre-deprecation period gives developers time to understand the new system and plan updates. Migration guides and compatibility checkers reduce the migration effort. Personal outreach to top-100 app developers protects the highest-merchant-impact apps. After the grace period, quarterly versioning with 12-month windows is reasonable — developers know 12 months in advance that their version will be deprecated and can plan accordingly. This approach also signals that Shopify takes API stability seriously (predictable deprecation) while maintaining platform evolution capability. Shopify implemented a similar system with API version dates and deprecation windows."},
+        {text:"Keep the current system — backwards compatibility is more important than API cleanliness. A messy API that doesn't break is better than a clean API that disrupts the ecosystem.",points:4,feedback:"Infinite backwards compatibility is a form of technical debt that compounds. Every new feature must work with every old API pattern, limiting what Shopify can build. API inconsistencies confuse new developers, reducing ecosystem growth. Security vulnerabilities in old API versions can't be patched if they must remain backwards-compatible. The cost of backwards compatibility is invisible but enormous: slower development, more bugs, higher maintenance burden, and reduced ability to innovate. Every major platform (Apple, Google, Stripe) uses versioned APIs with deprecation windows because the long-term ecosystem health depends on it."},
+        {text:"Implement versioning but with a 24-month deprecation window instead of 12 — give developers twice as long to update, reducing ecosystem disruption",points:6,feedback:"24 months is kinder but may be too long. If each API version lives for 24 months, Shopify must maintain 8 concurrent API versions (quarterly releases x 24-month window). That's significant engineering overhead. Also, 24 months reduces urgency — developers procrastinate when deadlines are far away. The 12-month window with quarterly versions means 4 concurrent versions at any time, which is manageable. The key isn't the window length — it's the ecosystem support (migration tools, documentation, personal outreach) that makes migration achievable within whatever window you set. A well-supported 12-month migration is better than an unsupported 24-month one."},
+      ]
+    },
+    {
+      scenario:`2021 — The Shopify Markets Roadmap\n\nShopify merchants selling internationally face a fragmented experience: separate stores for each country, manual currency conversion, complex tax calculations, and no unified analytics across markets. International selling on Shopify requires stitching together multiple apps and workarounds.\n\nThe product team proposes "Shopify Markets" — a unified international commerce layer that lets merchants manage multiple markets (countries/regions) from a single store. One catalogue, one admin, with market-specific pricing, currencies, languages, and domains.\n\nThe challenge: this is a platform-level architecture change that touches pricing, checkout, analytics, shipping, and taxes. It can't be shipped incrementally — a half-built Markets feature that handles currencies but not taxes actually makes the experience worse.`,
+      question:`How do you roadmap a platform-level feature like Shopify Markets that requires multiple components to ship together?`,
+      options:[
+        {text:"Build all components in parallel and ship them together as one large release — Markets only works if currencies, taxes, pricing, and analytics all work together",points:5,feedback:"A single large release is risky because it's a 'big bang' launch with no incremental validation. If the pricing engine has a bug, you can't ship because analytics depends on it. If taxes are delayed, the entire launch slips. Large releases also mean long development cycles with no merchant feedback until launch. The alternative — internal milestones with progressive external release — lets you validate components incrementally even if the full feature requires them all. Ship multi-currency first (high value, lower complexity), then add tax calculations, then pricing rules, then unified analytics."},
+        {text:"Define a minimum viable Markets experience (multi-currency + language) that delivers value independently, ship it, then layer additional capabilities (tax automation, market-specific pricing, unified analytics) in subsequent releases. Each release must be complete and valuable on its own, not a broken partial feature.",points:10,feedback:"Progressive release with 'complete at each stage' is the right approach for complex platform features. Multi-currency + language is a valid v1 because merchants can immediately sell internationally with automatic currency conversion and translated checkout — even without full tax automation (they can handle taxes manually). Each subsequent release adds a layer that makes the previous layers more powerful: tax automation reduces manual work, market-specific pricing enables competitive strategies, unified analytics provides business intelligence. The key constraint — each release must be valuable on its own — prevents the 'half-built feature' problem. Shopify Markets shipped progressively, starting with multi-currency and expanding to a full international commerce layer over multiple releases."},
+        {text:"Build Markets as a Shopify Plus exclusive feature first — enterprise merchants have the most international selling needs and can provide the best feedback. Expand to all merchants once the feature is mature.",points:6,feedback:"Plus-first launch provides high-quality feedback from sophisticated merchants, which is valuable for a complex feature. However, it delays value for the thousands of SMB merchants who already sell internationally through workarounds. SMB international sellers might actually benefit MORE from Shopify Markets than Plus merchants (who have agencies and developers building custom solutions). The ideal approach is to ship the core experience to all merchants while offering advanced Markets features (market-specific pricing rules, custom analytics) as Plus exclusives. This serves both audiences appropriately."},
+        {text:"Acquire an existing international commerce platform (like Global-e or Zonos) for their technology, then integrate it into Shopify",points:4,feedback:"Acquisition gives you technology but creates integration debt. Global-e and Zonos are built as bolt-ons, not platform-native features — they add JavaScript to checkout, use their own tax engines, and maintain separate pricing databases. Integrating acquired technology into Shopify's core platform is often harder than building natively because you're reconciling two different architectures. Shopify's competitive advantage is that everything works together natively. An acquired international commerce layer that feels like a third-party integration contradicts this advantage. Build natively for architectural coherence; acquire for specific capabilities (like tax database) that supplement the native build."},
+      ]
+    },
+    {
+      scenario:`2024 — Roadmap Review: What to Kill\n\nIt's quarterly roadmap review time. The roadmap has grown to 40+ items across multiple teams. Leadership wants to cut it to 15 high-impact items — the company is spread too thin, and execution quality is suffering.\n\nThe hardest part of roadmapping isn't deciding what to build — it's deciding what to stop building. Three items are on the chopping block:\n\nItem A: Shopify Collabs (creator/influencer marketplace) — 6 months in development, 20% complete, unclear merchant adoption signal\nItem B: AR product previews — 12 months in development, 70% complete, technically impressive but low merchant demand\nItem C: Advanced analytics dashboard redesign — 3 months in, 40% complete, merchants are requesting it but it's a "nice-to-have" not a revenue driver`,
+      question:`Which items do you cut from the roadmap?`,
+      options:[
+        {text:"Cut all three — if the company is spread too thin, focus exclusively on the core commerce platform and nothing else",points:4,feedback:"Cutting all three is too aggressive. Some of these items represent real strategic value — killing everything signals panic rather than prioritisation. The goal is to go from 40 to 15 high-impact items, which means keeping items that are strategically important while cutting items that aren't justified by their impact-to-cost ratio. Each item should be evaluated independently against clear criteria: strategic alignment, sunk cost reality (not fallacy), merchant impact, and opportunity cost."},
+        {text:"Cut A (Collabs) and B (AR previews). Keep C (analytics redesign). Collabs has unclear signal and is only 20% built — low sunk cost. AR is technically impressive but low demand — classic 'solution looking for a problem.' Analytics is merchant-requested and improves a core workflow.",points:10,feedback:"This is the right cut because it applies different criteria appropriately. Collabs (A) at 20% complete with unclear merchant signal is the easiest cut — low sunk cost and no validated demand. Killing it now saves 80% of the remaining investment. AR previews (B) at 70% complete triggers sunk-cost bias ('we're so close to finishing!'), but the low merchant demand means completing it won't drive meaningful adoption. The 70% investment is gone whether you finish or not — the question is whether the REMAINING 30% investment is justified by expected impact, and with low demand, it's not. Analytics (C) is a core workflow improvement that merchants actively request — it has the clearest path to merchant value of the three."},
+        {text:"Cut A (Collabs) only. Keep B (AR) because it's 70% done — killing a nearly-complete project wastes months of work. Keep C (analytics) because merchants want it.",points:5,feedback:"Keeping AR because it's 70% done is the textbook sunk cost fallacy. The 70% investment is spent regardless of your decision. The question is: should you invest the REMAINING 30% (engineering time, QA, documentation, support) for a feature with low merchant demand? If the feature won't drive adoption or revenue after launch, completing it means spending more resources AND ongoing maintenance for something few merchants use. 'We're almost done' is the most dangerous justification for continuing a project. The right question is always 'If we were starting fresh today, would we build this?' If no, cut it regardless of completion percentage."},
+        {text:"Don't cut — instead, reduce scope on all 40 items to make them shippable with less engineering investment",points:3,feedback:"Reducing scope on 40 items means 40 half-built features instead of 15 well-built ones. Merchants don't benefit from a 50%-scope analytics dashboard or a 50%-scope shipping feature. Each feature has a minimum viable quality bar below which it's not worth shipping. Spreading resources across 40 items virtually guarantees that none of them meet that bar. The discipline of roadmap cuts isn't about doing less work — it's about doing fewer things better. A merchant is better served by 15 excellent features than 40 mediocre ones."},
+      ]
+    },
+  ]
+};// ─── PHASE MANAGEMENT ─────────────────────────────────────
+function showPhase(id){
+  document.querySelectorAll('.phase').forEach(p=>p.classList.remove('active'));
+  document.getElementById('phase-'+id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+// ─── ON LOAD ──────────────────────────────────────────────
+window.addEventListener('DOMContentLoaded',()=>{
+  const params = new URLSearchParams(location.search);
+
+  // ?reset=true — clears attempt count
+  if(params.get('reset')==='true'){
+    Object.values(LS).forEach(k=>localStorage.removeItem(k));
+    location.href=location.pathname;
+    return;
+  }
+
+  // ?preview=true — founder mode: no email gate, no attempt limit
+  if(params.get('preview')==='true'){
+    state.name  = 'Preview Mode';
+    state.email = 'preview@cxosimulabs.com';
+    state.currentAttempt = 1;
+    // Show a small founder banner
+    const banner = document.createElement('div');
+    banner.style.cssText='position:fixed;bottom:16px;right:16px;background:#1a1a2e;color:#fff;padding:8px 16px;border-radius:8px;font-size:.78em;font-weight:600;z-index:9999;border:1px solid rgba(226,55,68,.4);';
+    banner.innerHTML='🔧 Founder Preview — <a href="?" style="color:#e23744;text-decoration:none;">Exit</a>';
+    document.body.appendChild(banner);
+    document.getElementById('attempt-badge-display').textContent = '🔧 Preview Mode';
+    showPhase('intro');
+    return;
+  }
+
+  const attempts = parseInt(localStorage.getItem(LS.attempts)||'0');
+  if(attempts>=2){
+    showPhase('blocked');
+  } else {
+    state.currentAttempt = attempts+1;
+    state.name = localStorage.getItem(LS.name)||'';
+    state.email = localStorage.getItem(LS.email)||'';
+    if(state.name && state.email){
+      document.getElementById('attempt-badge-display').textContent = `🎯 Attempt ${state.currentAttempt} of 2`;
+      showPhase('intro');
+    } else {
+      showPhase('email');
+    }
+  }
+});
+
+// ─── LEARN CARDS ──────────────────────────────────────────
+let currentLearnCard = 0;
+function nextLearnCard(){
+  const cards = document.querySelectorAll('.learn-card');
+  if(currentLearnCard < cards.length - 1){
+    cards[currentLearnCard].classList.remove('active');
+    currentLearnCard++;
+    cards[currentLearnCard].classList.add('active');
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+}
+
+// ─── EMAIL / OTP ──────────────────────────────────────────
+function sendOTP(){
+  const name  = document.getElementById('input-name').value.trim();
+  const email = document.getElementById('input-email').value.trim();
+  const errEl = document.getElementById('email-error');
+  if(!name || !email || !email.includes('@') || !email.includes('.')){
+    errEl.style.display='block';
+    return;
+  }
+  errEl.style.display='none';
+  state.name  = name;
+  state.email = email;
+  const btn = document.getElementById('send-otp-btn');
+  btn.textContent='Sending…';
+  btn.disabled=true;
+
+  const code = Math.floor(100000+Math.random()*900000).toString();
+  state.otp = code;
+  state.otpExpiry = Date.now() + 10*60*1000;
+  state.otpAttempts = 0;
+
+  // NOTE: Update your EmailJS template to use these variables:
+  // Subject: "Your CXO Simulabs verification code"
+  // Body: "Hi {{to_name}}, your verification code for {{sim_name}} is: {{otp}}
+  //        This code expires in 10 minutes. Do not share it.
+  //        — CXO Simulabs Team | cxosimulabs.com"
+  emailjs.send(EJS_SERVICE, EJS_TEMPLATE, {
+    to_name: name,
+    to_email: email,
+    otp: code,
+    sim_name: 'CPO Simulation 10: Shopify',
+    message: `Hi ${name},\n\nYour CXO Simulabs verification code for CPO Simulation 10 (Shopify) is:\n\n${code}\n\nThis code expires in 10 minutes. Do not share it with anyone.\n\n— CXO Simulabs Team\ncxosimulabs.com`
+  }).then(()=>{
+    gtag('event','otp_requested',{sim:'CPO-SIM-10-Shopify'});
+    localStorage.setItem(LS.name, name);
+    localStorage.setItem(LS.email, email);
+    document.getElementById('otp-email-display').textContent = email;
+    showPhase('otp');
+    startOTPTimer();
+  }).catch(()=>{
+    gtag('event','otp_failed',{sim:'CPO-SIM-10-Shopify'});
+    btn.textContent='Send Verification Code →';
+    btn.disabled=false;
+    errEl.textContent='Failed to send code. Please try again.';
+    errEl.style.display='block';
+  });
+}
+
+function startOTPTimer(){
+  clearInterval(state.timerInterval);
+  state.timerInterval = setInterval(()=>{
+    const remaining = Math.max(0, state.otpExpiry - Date.now());
+    const m = Math.floor(remaining/60000);
+    const s = Math.floor((remaining%60000)/1000);
+    const el = document.getElementById('otp-timer');
+    if(el) el.textContent = `${m}:${s.toString().padStart(2,'0')}`;
+    if(remaining===0){ clearInterval(state.timerInterval); }
+  },1000);
+}
+
+function verifyOTP(){
+  const input = document.getElementById('input-otp').value.trim();
+  const errEl = document.getElementById('otp-error');
+  const okEl  = document.getElementById('otp-success');
+  errEl.style.display='none';
+  if(Date.now() > state.otpExpiry){
+    errEl.textContent='Code expired. Please request a new one.';
+    errEl.style.display='block';
+    return;
+  }
+  if(input !== state.otp){
+    state.otpAttempts++;
+    errEl.style.display='block';
+    return;
+  }
+  clearInterval(state.timerInterval);
+  okEl.style.display='block';
+  gtag('event','email_verified',{sim:'CPO-SIM-10-Shopify'});
+  setTimeout(()=>{
+    document.getElementById('attempt-badge-display').textContent = `🎯 Attempt ${state.currentAttempt} of 2`;
+    showPhase('intro');
+  },800);
+}
+
+function resendOTP(){
+  showPhase('email');
+  document.getElementById('input-name').value = state.name;
+  document.getElementById('input-email').value = state.email;
+}
+
+// ─── SIMULATION ───────────────────────────────────────────
+function startSim(){
+  const questions = Q[state.currentAttempt];
+  state.currentQ = 0;
+  state.answers  = [];
+  state.totalScore = 0;
+  state.maxScore   = questions.reduce((sum,q)=>sum+Math.max(...q.options.map(o=>o.points)),0);
+  gtag('event','sim_started',{sim:'CPO-SIM-10-Shopify',attempt:state.currentAttempt});
+  showPhase('questions');
+  renderQuestion();
+}
+
+function renderQuestion(){
+  const questions = Q[state.currentAttempt];
+  const q = questions[state.currentQ];
+  const total = questions.length;
+  const qNum  = state.currentQ+1;
+
+  document.getElementById('q-progress-label').textContent = `Question ${qNum} of ${total}`;
+  document.getElementById('q-score-label').textContent = `Score: ${state.totalScore}`;
+  document.getElementById('progress-fill').style.width = `${((qNum-1)/total)*100}%`;
+
+  // Render scenario with bold headings
+  const scenarioEl = document.getElementById('q-scenario');
+  scenarioEl.innerHTML = q.scenario.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>');
+
+  document.getElementById('q-question').textContent = q.question;
+
+  const optionsEl = document.getElementById('q-options');
+  optionsEl.innerHTML = '';
+  q.options.forEach((opt,i)=>{
+    const div = document.createElement('div');
+    div.className='option';
+    div.textContent=opt.text;
+    div.onclick=()=>selectOption(i);
+    optionsEl.appendChild(div);
+  });
+
+  document.getElementById('q-feedback').style.display='none';
+  document.getElementById('next-btn').style.display='none';
+}
+
+function selectOption(idx){
+  const questions = Q[state.currentAttempt];
+  const q = questions[state.currentQ];
+  const chosen = q.options[idx];
+  const maxPts = Math.max(...q.options.map(o=>o.points));
+
+  // Lock all options — no color change, just prevent re-clicking
+  document.querySelectorAll('.option').forEach(el=>el.classList.add('locked'));
+
+  state.answers.push({q:state.currentQ, chosen:idx, points:chosen.points, maxPts, feedback:chosen.feedback, questionText:q.question});
+  state.totalScore += chosen.points;
+  document.getElementById('q-score-label').textContent = `Score: ${state.totalScore}`;
+
+  // Feedback is revealed at the end — just show Next button
+  document.getElementById('q-feedback').style.display='none';
+  document.getElementById('next-btn').style.display='inline-block';
+  document.getElementById('next-btn').textContent =
+    state.currentQ < questions.length-1 ? 'Next Question →' : 'See My Results →';
+}
+
+function nextQuestion(){
+  const questions = Q[state.currentAttempt];
+  if(state.currentQ < questions.length-1){
+    state.currentQ++;
+    renderQuestion();
+    document.getElementById('phase-questions').querySelector('.q-wrap').scrollTop=0;
+    window.scrollTo(0,0);
+  } else {
+    showResults();
+  }
+}
+
+// ─── RESULTS ──────────────────────────────────────────────
+function showResults(){
+  const pct = Math.round((state.totalScore/state.maxScore)*100);
+  const isPreview = new URLSearchParams(location.search).get('preview')==='true' || !!document.getElementById('founder-badge');
+  if(!isPreview){
+    const attemptsDone = parseInt(localStorage.getItem(LS.attempts)||'0') + 1;
+    localStorage.setItem(LS.attempts, attemptsDone.toString());
+    const scores = JSON.parse(localStorage.getItem(LS.scores)||'[]');
+    scores.push({attempt:state.currentAttempt, score:state.totalScore, pct, date:new Date().toISOString()});
+    localStorage.setItem(LS.scores, JSON.stringify(scores));
+  }
+
+  const tier = pct>=90?'Strategic Mastery':pct>=75?'Applied Proficiency':pct>=60?'Core Competency':'Foundational Understanding';
+  gtag('event','sim_completed',{sim:'CPO-SIM-10-Shopify',attempt:state.currentAttempt,score_pct:pct,tier:tier});
+  const tierClass = pct>=90?'tier-mastery':pct>=75?'tier-proficiency':pct>=60?'tier-competency':'tier-foundational';
+  const tierFeedback = {
+    'Strategic Mastery':'Outstanding. You demonstrated the kind of nuanced, first-principles thinking that defines exceptional product leaders.',
+    'Applied Proficiency':'Strong performance. You understand the core frameworks and apply them well. Focus on the questions you missed to sharpen your edge.',
+    'Core Competency':'Good foundations. You got the basics right but there are gaps in some advanced areas. Review the feedback on your lowest-scoring answers.',
+    'Foundational Understanding':'A learning opportunity. The feedback on each question contains the mental models you need. Try Attempt 2 with fresh perspective.'
+  }[tier];
+
+  document.getElementById('results-heading').textContent = `Your Results — Attempt ${state.currentAttempt}`;
+  document.getElementById('result-pct').textContent = pct+'%';
+  document.getElementById('result-score-label').textContent = `${state.totalScore} / ${state.maxScore} pts`;
+
+  const badge = document.getElementById('tier-badge');
+  badge.textContent = tier;
+  badge.className = 'tier-badge '+tierClass;
+  document.getElementById('tier-feedback').textContent = tierFeedback;
+
+  drawScoreRing(pct);
+
+  // Breakdown with full feedback
+  const bd = document.getElementById('q-breakdown');
+  const questions = Q[state.currentAttempt];
+  bd.innerHTML = state.answers.map((a,i)=>{
+    const pctQ = Math.round((a.points/a.maxPts)*100);
+    const dotClass = pctQ>=80?'dot-high':pctQ>=50?'dot-mid':'dot-low';
+    const borderColor = pctQ>=80?'#059669':pctQ>=50?'#d97706':'#dc2626';
+    const chosen = questions[i].options[a.chosen];
+    return `<div style="border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:12px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+        <div class="q-dot ${dotClass}"></div>
+        <span style="font-weight:600;font-size:.88em;flex:1;">Q${i+1}: ${questions[i].question}</span>
+        <span style="font-weight:700;font-size:.88em;color:${borderColor};">${a.points}/${a.maxPts}</span>
+      </div>
+      <div style="font-size:.82em;color:var(--muted);margin-bottom:8px;">Your answer: <em>${chosen.text}</em></div>
+      <div style="font-size:.85em;color:#374151;line-height:1.7;background:var(--light);border-left:3px solid ${borderColor};border-radius:0 6px 6px 0;padding:10px 14px;">${a.feedback}</div>
+    </div>`;
+  }).join('');
+
+  // ── Cumulative competency analysis ──
+  const compScores = state.answers.map((a,i)=>({
+    name: COMP_MAP[i]?COMP_MAP[i].name:`Competency ${i+1}`,
+    pct:  Math.round((a.points/a.maxPts)*100)
+  }));
+
+  document.getElementById('competency-bars').innerHTML = compScores.map(c=>{
+    const color = c.pct>=80?'#059669':c.pct>=50?'#d97706':'#dc2626';
+    return `<div class="comp-bar-row">
+      <div class="comp-label">${c.name}</div>
+      <div class="comp-track"><div class="comp-fill" style="width:${c.pct}%;background:${color};"></div></div>
+      <div class="comp-pct">${c.pct}%</div>
+    </div>`;
+  }).join('');
+
+  const sorted = [...compScores].sort((a,b)=>b.pct-a.pct);
+  const strengths = sorted.slice(0,2);
+  const gaps = sorted.slice(-2);
+
+  document.getElementById('strength-tags').innerHTML = strengths.map(s=>`<span class="strength-tag">${s.name}</span>`).join('');
+  document.getElementById('gap-tags').innerHTML = gaps.map(g=>`<span class="gap-tag">${g.name}</span>`).join('');
+
+  const insightText = pct>=90
+    ? `Outstanding across the board. Your ${strengths[0].name} and ${strengths[1].name} scores reflect the kind of first-principles thinking that defines exceptional product leaders. You consistently chose depth over speed, long-term over short-term, and principle over convenience.`
+    : pct>=75
+    ? `Strong CPO instincts. You excelled in ${strengths[0].name} and ${strengths[1].name}, showing real commercial and product maturity. Your development areas — ${gaps[0].name} and ${gaps[1].name} — are exactly where the highest-impact CPOs differentiate themselves as they scale.`
+    : pct>=60
+    ? `Solid foundations with clear growth areas. You showed genuine competency in ${strengths[0].name} and ${strengths[1].name}, but the gaps in ${gaps[0].name} and ${gaps[1].name} reveal where your thinking can deepen. Review the expert feedback on your lowest-scoring answers — those mental models are what separates good from great at CPO level.`
+    : `This simulation is designed to challenge. Your instincts in ${strengths[0].name} showed promise. The gaps in ${gaps[0].name} and ${gaps[1].name} reveal where CPO-level thinking diverges most sharply from general product management. Use the feedback from this round to recalibrate — Attempt 2 gives you fresh scenarios to apply these lessons.`;
+
+  document.getElementById('insight-text').textContent = insightText;
+
+  // Show "next sim" banner and attempt 2 prompt
+  const isPreview2 = new URLSearchParams(location.search).get('preview')==='true' || !!document.getElementById('founder-badge');
+  if(isPreview2){
+    document.getElementById('attempt2-prompt').style.display='block';
+    document.getElementById('next-sim-banner').style.display='none';
+  } else if(state.currentAttempt===1){
+    document.getElementById('attempt2-prompt').style.display='block';
+    document.getElementById('next-sim-banner').style.display='none';
+  } else {
+    document.getElementById('attempt2-prompt').style.display='none';
+    document.getElementById('next-sim-banner').style.display='flex';
+  }
+
+  drawCertificate(pct, tier);
+  drawBadge(pct, tier);
+  showPhase('results');
+}
+
+function startAttempt2(){
+  state.currentAttempt = 2;
+  showPhase('intro');
+  document.getElementById('attempt-badge-display').textContent = '🎯 Attempt 2 of 2';
+}
+
+// ─── SCORE RING ───────────────────────────────────────────
+function drawScoreRing(pct){
+  const canvas = document.getElementById('scoreRingCanvas');
+  const ctx = canvas.getContext('2d');
+  const cx=80, cy=80, r=65, lw=12;
+  ctx.clearRect(0,0,160,160);
+  ctx.beginPath(); ctx.arc(cx,cy,r,0,Math.PI*2);
+  ctx.strokeStyle='#e5e7eb'; ctx.lineWidth=lw; ctx.stroke();
+  const angle = (pct/100)*Math.PI*2 - Math.PI/2;
+  ctx.beginPath(); ctx.arc(cx,cy,r,-Math.PI/2,angle);
+  ctx.strokeStyle = pct>=90?'#16a34a':pct>=75?'#2563eb':pct>=60?'#d97706':'#dc2626';
+  ctx.lineWidth=lw; ctx.lineCap='round'; ctx.stroke();
+}
+
+// ─── SHARED HELPERS ───────────────────────────────────────
+function drawLogoText(ctx, x, y, size='bold 15px'){
+  ctx.font=`${size} Inter, Arial, sans-serif`;
+  ctx.textAlign='left';
+  const cxoW=ctx.measureText('CXO').width;
+  ctx.fillStyle='#1a1a2e'; ctx.fillText('CXO',x,y);
+  ctx.fillStyle='#e23744'; ctx.fillText(' Simulabs',x+cxoW,y);
+}
+function centeredLogo(ctx, W, y, size='bold 15px'){
+  ctx.font=`${size} Inter, Arial, sans-serif`;
+  const total=ctx.measureText('CXO Simulabs').width;
+  const cxoW=ctx.measureText('CXO').width;
+  const sx=W/2-total/2;
+  ctx.fillStyle='#1a1a2e'; ctx.fillText('CXO',sx,y);
+  ctx.fillStyle='#e23744'; ctx.fillText(' Simulabs',sx+cxoW,y);
+}
+
+// ─── CERTIFICATE ──────────────────────────────────────────
+function drawCertificate(pct, tier){
+  const canvas = document.getElementById('certCanvas');
+  const ctx = canvas.getContext('2d');
+  const W=1200, H=850;
+  canvas.width=W; canvas.height=H;
+  ctx.clearRect(0,0,W,H);
+  const CX=W/2; // center x for alignment
+  const gold='#c9a84c';
+
+  // ── Dark gradient background ──
+  const bg=ctx.createLinearGradient(0,0,W,H);
+  bg.addColorStop(0,'#0c1221'); bg.addColorStop(0.5,'#131b2e'); bg.addColorStop(1,'#1a1a2e');
+  ctx.fillStyle=bg; ctx.fillRect(0,0,W,H);
+
+  // ── Subtle dot grid ──
+  ctx.fillStyle='rgba(255,255,255,0.018)';
+  for(let x=0;x<W;x+=40)for(let y=0;y<H;y+=40){ctx.beginPath();ctx.arc(x,y,1.2,0,Math.PI*2);ctx.fill();}
+
+  // ── Gold accent bar at top ──
+  const topGrad=ctx.createLinearGradient(0,0,W,0);
+  topGrad.addColorStop(0,'#c9a84c'); topGrad.addColorStop(0.5,'#e8d48b'); topGrad.addColorStop(1,'#c9a84c');
+  ctx.fillStyle=topGrad; ctx.fillRect(0,0,W,5);
+
+  // ── Border frame ──
+  ctx.strokeStyle='rgba(201,168,76,0.25)'; ctx.lineWidth=1;
+  ctx.strokeRect(24,24,W-48,H-48);
+
+  // ── Corner ornaments ──
+  [[26,26,1,1],[W-26,26,-1,1],[26,H-26,1,-1],[W-26,H-26,-1,-1]].forEach(([x,y,sx,sy])=>{
+    ctx.strokeStyle='rgba(201,168,76,0.4)'; ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+sx*32,y);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x,y+sy*32);ctx.stroke();
+  });
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 1: HEADER — Logo + Track (y: 60–120)
+  // ═══════════════════════════════════════════════════════════
+  ctx.textAlign='left';
+  ctx.font='bold 26px Inter, Arial, sans-serif';
+  const cxoW=ctx.measureText('CXO').width;
+  const slW=ctx.measureText(' Simulabs').width;
+  const logoX=CX-(cxoW+slW)/2;
+  ctx.fillStyle='#ffffff'; ctx.fillText('CXO',logoX,72);
+  ctx.fillStyle='#e23744'; ctx.fillText(' Simulabs',logoX+cxoW,72);
+
+  ctx.textAlign='center';
+  ctx.font='600 11px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold; ctx.letterSpacing='3px';
+  ctx.fillText('CPO TRACK  ·  SIMULATION 10',CX,98);
+  ctx.letterSpacing='0';
+
+  // Gold divider with diamond
+  ctx.strokeStyle='rgba(201,168,76,0.3)'; ctx.lineWidth=0.8;
+  ctx.beginPath();ctx.moveTo(CX-110,116);ctx.lineTo(CX+110,116);ctx.stroke();
+  ctx.fillStyle=gold;
+  ctx.beginPath();ctx.moveTo(CX,112);ctx.lineTo(CX+4,116);ctx.lineTo(CX,120);ctx.lineTo(CX-4,116);ctx.closePath();ctx.fill();
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 2: TITLE (y: 140–160)
+  // ═══════════════════════════════════════════════════════════
+  ctx.letterSpacing='6px';
+  ctx.font='600 13px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold;
+  ctx.fillText('SIMULATION COMPLETION RECORD',CX,152);
+  ctx.letterSpacing='0';
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 3: NAME (y: 185–290)
+  // ═══════════════════════════════════════════════════════════
+  ctx.font='italic 15px Georgia, serif';
+  ctx.fillStyle='rgba(255,255,255,0.4)';
+  ctx.fillText('This certifies that',CX,200);
+
+  const name=state.name||state.email;
+  ctx.font='bold 52px Georgia, "Times New Roman", serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(name,CX,260);
+
+  // Gold fading underline
+  const nw=Math.min(ctx.measureText(name).width+60,W-200);
+  const ulGrad=ctx.createLinearGradient(CX-nw/2,0,CX+nw/2,0);
+  ulGrad.addColorStop(0,'rgba(201,168,76,0)'); ulGrad.addColorStop(0.3,'rgba(201,168,76,0.45)');
+  ulGrad.addColorStop(0.5,'rgba(201,168,76,0.65)'); ulGrad.addColorStop(0.7,'rgba(201,168,76,0.45)');
+  ulGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=ulGrad; ctx.lineWidth=1.2;
+  ctx.beginPath();ctx.moveTo(CX-nw/2,275);ctx.lineTo(CX+nw/2,275);ctx.stroke();
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 4: ACHIEVEMENT — Competency HERO, company secondary (y: 300–400)
+  // ═══════════════════════════════════════════════════════════
+  ctx.font='italic 14px Georgia, serif';
+  ctx.fillStyle='rgba(255,255,255,0.38)';
+  ctx.fillText('has completed a learning simulation exploring',CX,316);
+
+  // COMPETENCY = THE HERO
+  ctx.font='bold 28px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText('Product Roadmapping',CX,358);
+
+  // Company = secondary context
+  ctx.font='15px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.35)';
+  ctx.fillText('through the Shopify case simulation',CX,390);
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 5: METRICS — Score / Tier / Date (y: 430–560)
+  // ═══════════════════════════════════════════════════════════
+  // Horizontal divider above metrics
+  const divGrad1=ctx.createLinearGradient(100,0,W-100,0);
+  divGrad1.addColorStop(0,'rgba(201,168,76,0)'); divGrad1.addColorStop(0.2,'rgba(201,168,76,0.2)');
+  divGrad1.addColorStop(0.5,'rgba(201,168,76,0.3)'); divGrad1.addColorStop(0.8,'rgba(201,168,76,0.2)');
+  divGrad1.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=divGrad1; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(100,420);ctx.lineTo(W-100,420);ctx.stroke();
+
+  const metricsY=488; // vertical center for all 3 columns
+  const colL=240, colC=CX, colR=W-240; // 3 evenly spaced columns
+  const ringColor=pct>=90?'#4ade80':pct>=75?'#60a5fa':pct>=60?'#fbbf24':'#f87171';
+
+  // — SCORE (left) — with ring
+  const ringR=58, ringLw=8;
+  ctx.beginPath();ctx.arc(colL,metricsY,ringR,0,Math.PI*2);
+  ctx.strokeStyle='rgba(255,255,255,0.06)'; ctx.lineWidth=ringLw; ctx.stroke();
+  const angle=(pct/100)*Math.PI*2-Math.PI/2;
+  ctx.beginPath();ctx.arc(colL,metricsY,ringR,-Math.PI/2,angle);
+  ctx.strokeStyle=ringColor; ctx.lineWidth=ringLw; ctx.lineCap='round'; ctx.stroke();
+  ctx.lineCap='butt';
+  ctx.font='bold 44px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(pct+'%',colL,metricsY+14);
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)'; ctx.letterSpacing='2px';
+  ctx.fillText('SCORE',colL,metricsY+38);
+  ctx.letterSpacing='0';
+
+  // — TIER (center) —
+  ctx.font='bold 26px Inter, Arial, sans-serif';
+  ctx.fillStyle=ringColor;
+  ctx.fillText(tier,colC,metricsY+8);
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)'; ctx.letterSpacing='2px';
+  ctx.fillText('PERFORMANCE TIER',colC,metricsY+32);
+  ctx.letterSpacing='0';
+
+  // — DATE (right) —
+  const d=new Date();
+  const dateStr=d.toLocaleString('default',{month:'long'})+' '+d.getDate()+', '+d.getFullYear();
+  ctx.font='bold 20px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(dateStr,colR,metricsY+8);
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)'; ctx.letterSpacing='2px';
+  ctx.fillText('DATE ISSUED',colR,metricsY+32);
+  ctx.letterSpacing='0';
+
+  // Vertical separators between columns
+  ctx.strokeStyle='rgba(201,168,76,0.15)'; ctx.lineWidth=0.8;
+  const sepTop=metricsY-52, sepBot=metricsY+48;
+  ctx.beginPath();ctx.moveTo((colL+colC)/2,sepTop);ctx.lineTo((colL+colC)/2,sepBot);ctx.stroke();
+  ctx.beginPath();ctx.moveTo((colC+colR)/2,sepTop);ctx.lineTo((colC+colR)/2,sepBot);ctx.stroke();
+
+  // Horizontal divider below metrics
+  ctx.strokeStyle=divGrad1; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(100,556);ctx.lineTo(W-100,556);ctx.stroke();
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 6: COMPETENCIES ASSESSED (y: 580–680)
+  // ═══════════════════════════════════════════════════════════
+  ctx.letterSpacing='2.5px';
+  ctx.font='600 9px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold;
+  ctx.fillText('COMPETENCIES ASSESSED',CX,586);
+  ctx.letterSpacing='0';
+
+  const comps=COMP_MAP.map(c=>c.name);
+  ctx.font='11.5px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.45)';
+  // 2 rows of 5, evenly spaced
+  const compStartX=160, compSpacing=220;
+  comps.slice(0,5).forEach((c,i)=>{ctx.fillText(c,compStartX+i*compSpacing,614);});
+  comps.slice(5,10).forEach((c,i)=>{ctx.fillText(c,compStartX+i*compSpacing,640);});
+
+  // ═══════════════════════════════════════════════════════════
+  // SECTION 7: FOOTER (y: 780–830)
+  // ═══════════════════════════════════════════════════════════
+  // Seal (bottom-right)
+  const sealX=W-90, sealY=H-85, sealR=32;
+  ctx.strokeStyle='rgba(201,168,76,0.3)'; ctx.lineWidth=1.2;
+  ctx.beginPath();ctx.arc(sealX,sealY,sealR,0,Math.PI*2);ctx.stroke();
+  ctx.strokeStyle='rgba(201,168,76,0.12)'; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.arc(sealX,sealY,sealR-6,0,Math.PI*2);ctx.stroke();
+  ctx.fillStyle='rgba(201,168,76,0.04)';
+  ctx.beginPath();ctx.arc(sealX,sealY,sealR,0,Math.PI*2);ctx.fill();
+  ctx.font='bold 7px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold; ctx.letterSpacing='1.5px';
+  ctx.fillText('COMPLETED',sealX,sealY-6);
+  ctx.letterSpacing='0';
+  ctx.font='bold 18px Arial';
+  ctx.fillStyle=gold;
+  ctx.fillText('✓',sealX,sealY+10);
+
+  // Footer divider
+  const footGrad=ctx.createLinearGradient(50,0,W-50,0);
+  footGrad.addColorStop(0,'rgba(201,168,76,0)'); footGrad.addColorStop(0.3,'rgba(201,168,76,0.2)');
+  footGrad.addColorStop(0.5,'rgba(201,168,76,0.3)'); footGrad.addColorStop(0.7,'rgba(201,168,76,0.2)');
+  footGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=footGrad; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(50,H-55);ctx.lineTo(W-50,H-55);ctx.stroke();
+
+  // Footer text
+  ctx.textAlign='left';
+  ctx.font='12px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.5)';
+  ctx.fillText('© 2026 CXO Simulabs  ·  Not a professional certification  ·  Not affiliated with Shopify Inc.',55,H-32);
+  ctx.textAlign='right';
+  ctx.fillStyle='rgba(255,255,255,0.5)';
+  ctx.font='bold 11px Inter, Arial, sans-serif';
+  ctx.fillText('www.cxosimulabs.com',W-55,H-32);
+}
+
+// ─── INSTAGRAM BADGE ──────────────────────────────────────
+function drawBadge(pct, tier){
+  const canvas=document.getElementById('badgeCanvas');
+  const ctx=canvas.getContext('2d');
+  const S=1080;
+  ctx.clearRect(0,0,S,S);
+  const C=S/2; // center
+  const gold='#c9a84c';
+
+  // ── Dark gradient background ──
+  const bg=ctx.createLinearGradient(0,0,S,S);
+  bg.addColorStop(0,'#0c1221'); bg.addColorStop(0.5,'#131b2e'); bg.addColorStop(1,'#1a1a2e');
+  ctx.fillStyle=bg; ctx.fillRect(0,0,S,S);
+
+  // ── Subtle dot grid ──
+  ctx.fillStyle='rgba(255,255,255,0.018)';
+  for(let x=0;x<S;x+=44)for(let y=0;y<S;y+=44){ctx.beginPath();ctx.arc(x,y,1.2,0,Math.PI*2);ctx.fill();}
+
+  // ── Gold bar top ──
+  const topGrad=ctx.createLinearGradient(0,0,S,0);
+  topGrad.addColorStop(0,'#c9a84c'); topGrad.addColorStop(0.5,'#e8d48b'); topGrad.addColorStop(1,'#c9a84c');
+  ctx.fillStyle=topGrad; ctx.fillRect(0,0,S,6);
+
+  // ── Border + corners ──
+  ctx.strokeStyle='rgba(201,168,76,0.25)'; ctx.lineWidth=1;
+  ctx.strokeRect(24,24,S-48,S-48);
+  [[26,26,1,1],[S-26,26,-1,1],[26,S-26,1,-1],[S-26,S-26,-1,-1]].forEach(([x,y,sx,sy])=>{
+    ctx.strokeStyle='rgba(201,168,76,0.4)'; ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x+sx*28,y);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(x,y);ctx.lineTo(x,y+sy*28);ctx.stroke();
+  });
+
+  // ── Logo ──
+  ctx.textAlign='left';
+  ctx.font='bold 36px Inter, Arial, sans-serif';
+  const cW=ctx.measureText('CXO').width;
+  const sW=ctx.measureText(' Simulabs').width;
+  const lStart=C-(cW+sW)/2;
+  ctx.fillStyle='#ffffff'; ctx.fillText('CXO',lStart,82);
+  ctx.fillStyle='#e23744'; ctx.fillText(' Simulabs',lStart+cW,82);
+
+  // ── Track label ──
+  ctx.textAlign='center';
+  ctx.font='600 13px Inter, Arial, sans-serif';
+  ctx.fillStyle=gold; ctx.letterSpacing='3px';
+  ctx.fillText('CPO TRACK  ·  SIMULATION 10',C,114);
+  ctx.letterSpacing='0';
+
+  // ── Gold divider ──
+  ctx.strokeStyle='rgba(201,168,76,0.3)'; ctx.lineWidth=0.8;
+  ctx.beginPath();ctx.moveTo(C-100,134);ctx.lineTo(C+100,134);ctx.stroke();
+  ctx.fillStyle=gold;
+  ctx.beginPath();ctx.moveTo(C,130);ctx.lineTo(C+4,134);ctx.lineTo(C,138);ctx.lineTo(C-4,134);ctx.closePath();ctx.fill();
+
+  // ── Competency HERO ──
+  ctx.font='bold 36px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText('Product',C,186);
+  ctx.font='bold 36px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.5)';
+  ctx.fillText('Roadmapping',C,228);
+
+  // ── Company context ──
+  ctx.font='16px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.3)';
+  ctx.fillText('Shopify case simulation',C,262);
+
+  // ── Name ──
+  const name=state.name||state.email;
+  ctx.font='bold 40px Georgia, "Times New Roman", serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(name,C,320);
+  // Gold underline
+  const nw2=Math.min(ctx.measureText(name).width+40,S-120);
+  const ulGrad=ctx.createLinearGradient(C-nw2/2,0,C+nw2/2,0);
+  ulGrad.addColorStop(0,'rgba(201,168,76,0)'); ulGrad.addColorStop(0.3,'rgba(201,168,76,0.4)');
+  ulGrad.addColorStop(0.5,'rgba(201,168,76,0.55)'); ulGrad.addColorStop(0.7,'rgba(201,168,76,0.4)');
+  ulGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=ulGrad; ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(C-nw2/2,334);ctx.lineTo(C+nw2/2,334);ctx.stroke();
+
+  // ── Score ring ──
+  const ringCY=560, r=170, lw=22;
+  ctx.beginPath();ctx.arc(C,ringCY,r,0,Math.PI*2);
+  ctx.strokeStyle='rgba(255,255,255,0.06)'; ctx.lineWidth=lw; ctx.stroke();
+  const angle=(pct/100)*Math.PI*2-Math.PI/2;
+  const ringColor=pct>=90?'#4ade80':pct>=75?'#60a5fa':pct>=60?'#fbbf24':'#f87171';
+  ctx.beginPath();ctx.arc(C,ringCY,r,-Math.PI/2,angle);
+  ctx.strokeStyle=ringColor; ctx.lineWidth=lw; ctx.lineCap='round'; ctx.stroke();
+  ctx.lineCap='butt';
+
+  // Score text
+  ctx.font='bold 120px Inter, Arial, sans-serif';
+  ctx.fillStyle='#ffffff';
+  ctx.fillText(pct+'%',C,ringCY+40);
+
+  // Tier
+  ctx.font='bold 30px Inter, Arial, sans-serif';
+  ctx.fillStyle=ringColor;
+  ctx.fillText(tier,C,ringCY+88);
+
+  // ── Footer ──
+  const fDivGrad=ctx.createLinearGradient(40,0,S-40,0);
+  fDivGrad.addColorStop(0,'rgba(201,168,76,0)'); fDivGrad.addColorStop(0.3,'rgba(201,168,76,0.2)');
+  fDivGrad.addColorStop(0.5,'rgba(201,168,76,0.3)'); fDivGrad.addColorStop(0.7,'rgba(201,168,76,0.2)');
+  fDivGrad.addColorStop(1,'rgba(201,168,76,0)');
+  ctx.strokeStyle=fDivGrad; ctx.lineWidth=0.6;
+  ctx.beginPath();ctx.moveTo(40,S-100);ctx.lineTo(S-40,S-100);ctx.stroke();
+
+  // Seal bottom-right
+  const sealX=S-90, sealY=S-58;
+  ctx.strokeStyle='rgba(201,168,76,0.28)'; ctx.lineWidth=1;
+  ctx.beginPath();ctx.arc(sealX,sealY,22,0,Math.PI*2);ctx.stroke();
+  ctx.font='bold 14px Arial'; ctx.fillStyle=gold;
+  ctx.fillText('✓',sealX,sealY+5);
+
+  ctx.font='bold 22px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.45)';
+  ctx.fillText('www.cxosimulabs.com',C,S-52);
+
+  ctx.font='14px Inter, Arial, sans-serif';
+  ctx.fillStyle='rgba(255,255,255,0.2)';
+  ctx.fillText('Try the free simulation →',C,S-28);
+}
+
+function getPctTier(){
+  return {
+    pct: parseInt(document.getElementById('result-pct').textContent),
+    tier: document.getElementById('tier-badge').textContent
+  };
+}
+function downloadCert(){
+  const {pct,tier}=getPctTier();
+  gtag('event','cert_downloaded',{sim:'CPO-SIM-10-Shopify',score_pct:pct,tier:tier});
+  const canvas=document.getElementById('certCanvas');
+  canvas.width=1200; canvas.height=850;
+  drawCertificate(pct,tier);
+  const link=document.createElement('a');
+  link.download=`CXO-Simulabs-Certificate-${(state.name||'').replace(/\s/g,'-')}.png`;
+  link.href=canvas.toDataURL('image/png'); link.click();
+}
+function downloadBadge(){
+  const {pct,tier}=getPctTier();
+  gtag('event','badge_downloaded',{sim:'CPO-SIM-10-Shopify',score_pct:pct,tier:tier});
+  const canvas=document.getElementById('badgeCanvas');
+  drawBadge(pct,tier);
+  const link=document.createElement('a');
+  link.download=`CXO-Simulabs-Badge-${(state.name||'').replace(/\s/g,'-')}.png`;
+  link.href=canvas.toDataURL('image/png'); link.click();
+}
+function shareLinkedIn(){
+  gtag('event','share_linkedin',{sim:'CPO-SIM-10-Shopify'});
+  const {pct,tier}=getPctTier();
+  const text=encodeURIComponent(`I just scored ${pct}% (${tier}) on the Shopify Roadmapping Simulation by CXO Simulabs — 10 real product decisions, expert feedback.\n\nTry it free: https://cxosimulabs.com\n\n#ProductManagement #CPO #CXOSimulabs #Roadmapping`);
+  window.open(`https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcxosimulabs.com&summary=${text}`,'_blank');
+}
+function shareTwitter(){
+  const {pct,tier}=getPctTier();
+  const text=encodeURIComponent(`Just scored ${pct}% (${tier}) on the Shopify Roadmapping Simulation by @CXOSimulabs — 10 real product decisions, expert feedback. Try it free 👇\nhttps://cxosimulabs.com\n#CPO #ProductManagement #Roadmapping`);
+  window.open(`https://twitter.com/intent/tweet?text=${text}`,'_blank');
+}
+function shareWhatsApp(){
+  const {pct,tier}=getPctTier();
+  const text=encodeURIComponent(`I scored ${pct}% (${tier}) on the Shopify Roadmapping Simulation by CXO Simulabs — 10 real product decisions with expert feedback. Try it free: https://cxosimulabs.com`);
+  window.open(`https://wa.me/?text=${text}`,'_blank');
+}
+function copyLink(){
+  navigator.clipboard.writeText('https://cxosimulabs.com').then(()=>{
+    const btn=document.getElementById('copy-link-btn');
+    btn.textContent='✓ Copied!';
+    setTimeout(()=>btn.textContent='Copy Link',2000);
+  });
+}
+</script>
+</body>
+</html>
